@@ -1,4 +1,11 @@
 <style>
+  .little-background {
+    /* green color */
+    background: #1fcf0f !important;
+  }
+  .crowd-background {
+    background: #e92c2c !important;
+  }
   :not(.fa) {
     font-family: 'Nunito', Arial !important;
   }
@@ -465,7 +472,7 @@ bottom: 0 !important;*/
     /*width: 5px;*/
     /*height: 5px;*/
     /*display: block;*/
-    /*background-color: #E28217;*/
+    /*background-*/
     /*position: absolute;*/
     /*top: 15px;*/
     /*left: -15px;*/
@@ -486,7 +493,7 @@ bottom: 0 !important;*/
     }
 
     .dvctthome-link:hover {
-      color: #E28217;
+      
       text-decoration: unset;
     }
 
@@ -827,7 +834,7 @@ bottom: 0 !important;*/
     }
 
     .item-city-active {
-      background-color: #e28217;
+      background-color: #E28217;
       border-color: transparent;
       color: #fff;
     }
@@ -1125,46 +1132,46 @@ bottom: 0 !important;*/
                   <div class="row">
                     <div class="col-12 mt-4" style="margin: 1.5%;">
                       <div id="zone-city" class="is-hidden">
-                        <h3><b>Danh sách thành phố</b></h3>
+                        <h3><b>Danh sách địa điểm</b></h3>
                         <div class="row">
                           <div class="col-2">
-                            <div class="card cursor-pointer item-city">
+                            <button class="card cursor-pointer item-city w-100"  onclick="changeDestination(0,0,0, [0,1,1,0,1,1,1,0,0,1,1,0])">
                               <div class="card-body">
-                                <span class="name-city">Hà Nội</span>
+                                <span class="name-city">Hoàn Kiếm</span>
                               </div>
-                            </div>
+                            </button>
                           </div>
 
                           <div class="col-2">
-                            <div class="card cursor-pointer item-city">
+                            <button class="card cursor-pointer item-city w-100"  onclick="changeDestination(0,0,0, [1,1,1,0,1,0,1,0,0,1,1,0])">
                               <div class="card-body">
-                                <span class="name-city">Huế</span>
+                                <span class="name-city">Đống Đa</span>
                               </div>
-                            </div>
+                            </button>
                           </div>
 
                           <div class="col-2">
-                            <div class="card cursor-pointer item-city">
+                            <button class="card cursor-pointer item-city w-100" onclick="changeDestination(0,0,0, [1,1,0,1,1,0,1,0,1,1,1,0])">
                               <div class="card-body">
-                                <span class="name-city">Đà Nẵng</span>
+                                <span class="name-city">Ba Đình</span>
                               </div>
-                            </div>
+                            </button>
                           </div>
 
                           <div class="col-2">
-                            <div class="card cursor-pointer item-city">
+                            <button class="card cursor-pointer item-city w-100" onclick="changeDestination(0,0,0, [0,1,1,0,1,0,1,0,0,1,1,1])">
                               <div class="card-body">
-                                <span class="name-city">Cần Thơ</span>
+                                <span class="name-city">Hai Bà Trưng</span>
                               </div>
-                            </div>
+                            </button>
                           </div>
 
                           <div class="col-2">
-                            <div class="card cursor-pointer item-city">
+                            <button class="card cursor-pointer item-city w-100" onclick="changeDestination(0,0,0, [1,1,1,1,1,1,1,1,0,1,1,0])">
                               <div class="card-body">
-                                <span class="name-city">TP. Hồ Chí Minh</span>
+                                <span class="name-city">Hoàng Mai</span>
                               </div>
-                            </div>
+                            </button>
                           </div>
 
                         </div>
@@ -1182,20 +1189,20 @@ bottom: 0 !important;*/
                             <div class="card">
                               <div class="card-body">
                                 <div class="card-title">
-                                  <h4><b>Năm 2022</b></h4>
+                                  <h4><b>Hôm nay, 19/02/2023 <i>(Ngày nghỉ)</i> </b></h4>
                                 </div>
 
                                 <div class="row">
                                   <div class="col-6">
                                     <div class="chart-fake">
-                                      <div class="chart-fake-value">100% đúng hạn</div>
+                                      <div class="chart-fake-value">KHÔNG ĐÔNG</div>
                                     </div>
                                   </div>
 
                                   <div class="col-6">
-                                    <p style="font-size: 18px;">Tổng HS nộp: 5.486.427</p>
-                                    <p style="font-size: 16px;">Giải quyết: 5.303.821 hồ sơ</p>
-                                    <p style="font-size: 16px;">Đúng hạn: 5.303.821 hồ sơ</p>
+                                    <p style="font-size: 18px;">Số nhân viên: <span id="nv-hanh-chinh"></span> người </p>
+                                    <p style="font-size: 18px;">Đang làm thủ tục: <span id="dang-lam"></span> người</p>
+                                    <p style="font-size: 18px;">Đang chờ: <span id="dang-cho"></span> người</p>
                                   </div>
                                 </div>
                               </div>
@@ -1205,17 +1212,17 @@ bottom: 0 !important;*/
                             <div class="card">
                               <div class="card-body">
                                 <div class="card-title">
-                                  <h4><b>Tình hình</b></h4>
+                                  <h4><b>Dự đoán tình hình</b></h4>
 
 
                                   <div class="zone-data-month">
                                     <div class="row">
                                       <div class="col-4">
-                                        <div class="card">
+                                        <div class="card" id="day-1">
                                           <div class="card-body">
                                             <div class="item-month">
-                                              <p style="font-size: 15px; color: #e28217;">
-                                                Tháng 1
+                                              <p style="font-size: 15px; ">
+                                                21/02/2023
                                               </p>
       
                                               <p class="mt-4" style="font-size: 14px;">
@@ -1227,11 +1234,11 @@ bottom: 0 !important;*/
                                       </div>
 
                                       <div class="col-4">
-                                        <div class="card">
+                                        <div class="card" id="day-2">
                                           <div class="card-body">
                                             <div class="item-month">
-                                              <p style="font-size: 15px; color: #e28217;">
-                                                Tháng 2
+                                              <p style="font-size: 15px; ">
+                                                22/02/2023
                                               </p>
       
                                               <p class="mt-4" style="font-size: 14px;">
@@ -1243,11 +1250,11 @@ bottom: 0 !important;*/
                                       </div>
 
                                       <div class="col-4">
-                                        <div class="card">
+                                        <div class="card" id="day-3">
                                           <div class="card-body">
                                             <div class="item-month">
-                                              <p style="font-size: 15px; color: #e28217;">
-                                                Tháng 3
+                                              <p style="font-size: 15px; ">
+                                                23/02/2023
                                               </p>
       
                                               <p class="mt-4" style="font-size: 14px;">
@@ -1259,11 +1266,11 @@ bottom: 0 !important;*/
                                       </div>
 
                                       <div class="col-4 mt-2">
-                                        <div class="card">
+                                        <div class="card" id="day-4">
                                           <div class="card-body">
                                             <div class="item-month">
-                                              <p style="font-size: 15px; color: #e28217;">
-                                                Tháng 4
+                                              <p style="font-size: 15px; ">
+                                                24/02/2023
                                               </p>
       
                                               <p class="mt-4" style="font-size: 14px;">
@@ -1275,11 +1282,11 @@ bottom: 0 !important;*/
                                       </div>
 
                                       <div class="col-4 mt-2">
-                                        <div class="card">
+                                        <div class="card" id="day-5">
                                           <div class="card-body">
                                             <div class="item-month">
-                                              <p style="font-size: 15px; color: #e28217;">
-                                                Tháng 5
+                                              <p style="font-size: 15px; ">
+                                                27/02/2023
                                               </p>
       
                                               <p class="mt-4" style="font-size: 14px;">
@@ -1291,11 +1298,11 @@ bottom: 0 !important;*/
                                       </div>
 
                                       <div class="col-4 mt-2">
-                                        <div class="card">
+                                        <div class="card" id="day-6">
                                           <div class="card-body">
                                             <div class="item-month">
-                                              <p style="font-size: 15px; color: #e28217;">
-                                                Tháng 6
+                                              <p style="font-size: 15px; ">
+                                                28/02/2023
                                               </p>
       
                                               <p class="mt-4" style="font-size: 14px;">
@@ -1307,11 +1314,11 @@ bottom: 0 !important;*/
                                       </div>
 
                                       <div class="col-4 mt-2">
-                                        <div class="card">
+                                        <div class="card" id="day-7">
                                           <div class="card-body">
                                             <div class="item-month">
-                                              <p style="font-size: 15px; color: #e28217;">
-                                                Tháng 7
+                                              <p style="font-size: 15px; ">
+                                                01/03/2023
                                               </p>
       
                                               <p class="mt-4" style="font-size: 14px;">
@@ -1323,11 +1330,11 @@ bottom: 0 !important;*/
                                       </div>
 
                                       <div class="col-4 mt-2">
-                                        <div class="card">
+                                        <div class="card" id="day-8">
                                           <div class="card-body">
                                             <div class="item-month">
-                                              <p style="font-size: 15px; color: #e28217;">
-                                                Tháng 8
+                                              <p style="font-size: 15px; ">
+                                                02/03/2023
                                               </p>
       
                                               <p class="mt-4" style="font-size: 14px;">
@@ -1339,11 +1346,11 @@ bottom: 0 !important;*/
                                       </div>
 
                                       <div class="col-4 mt-2">
-                                        <div class="card">
+                                        <div class="card" id="day-9">
                                           <div class="card-body">
                                             <div class="item-month">
-                                              <p style="font-size: 15px; color: #e28217;">
-                                                Tháng 9
+                                              <p style="font-size: 15px; ">
+                                                03/03/2023
                                               </p>
       
                                               <p class="mt-4" style="font-size: 14px;">
@@ -1355,11 +1362,11 @@ bottom: 0 !important;*/
                                       </div>
 
                                       <div class="col-4 mt-2">
-                                        <div class="card">
+                                        <div class="card" id="day-10">
                                           <div class="card-body">
                                             <div class="item-month">
-                                              <p style="font-size: 15px; color: #e28217;">
-                                                Tháng 10
+                                              <p style="font-size: 15px; ">
+                                                06/03/2023
                                               </p>
       
                                               <p class="mt-4" style="font-size: 14px;">
@@ -1371,11 +1378,11 @@ bottom: 0 !important;*/
                                       </div>
 
                                       <div class="col-4 mt-2">
-                                        <div class="card">
+                                        <div class="card" id="day-11">
                                           <div class="card-body">
                                             <div class="item-month">
-                                              <p style="font-size: 15px; color: #e28217;">
-                                                Tháng 11
+                                              <p style="font-size: 15px; ">
+                                                07/03/2023
                                               </p>
       
                                               <p class="mt-4" style="font-size: 14px;">
@@ -1387,11 +1394,11 @@ bottom: 0 !important;*/
                                       </div>
 
                                       <div class="col-4 mt-2">
-                                        <div class="card">
+                                        <div class="card" id="day-12">
                                           <div class="card-body">
                                             <div class="item-month">
-                                              <p style="font-size: 15px; color: #e28217;">
-                                                Tháng 12
+                                              <p style="font-size: 15px; ">
+                                                08/03/2023
                                               </p>
       
                                               <p class="mt-4" style="font-size: 14px;">
@@ -1558,6 +1565,25 @@ bottom: 0 !important;*/
       </div>
     </div>
     <script type="text/javascript">
+      function changeDestination(val1, val2, val3, predictions){
+        document.getElementById("nv-hanh-chinh").innerText = val1;
+        document.getElementById("dang-lam").innerText = val2;
+        document.getElementById("dang-cho").innerText = val3;
+        for (let index = 1; index <= predictions.length; index++) {
+          document.getElementById("day-"+index).classList.remove("little-bacground");
+          document.getElementById("day-"+index).classList.remove("crowd-bacground");
+        }
+        for (let index = 1; index <= predictions.length; index++) {
+          if(predictions[index - 1]){
+            document.getElementById("day-"+index).classList.add("little-background");
+            // change text inside document.getElementById("day-"+index) with class name mt-4 to KHÔNG ĐÔNG
+            document.getElementById("day-"+index).getElementsByClassName("mt-4")[0].innerText = "KHÔNG ĐÔNG";
+          }else{
+            document.getElementById("day-"+index).classList.add("crowd-background");
+            document.getElementById("day-"+index).getElementsByClassName("mt-4")[0].innerText = "ĐÔNG";
+          }
+        }
+      }
       function openTab(evt, name) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
