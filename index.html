@@ -1,1217 +1,1762 @@
-
 <style>
   :not(.fa) {
-  font-family: 'Nunito', Arial !important;
-}
-.dvc-header .menus > li:hover > a {
-height:40px !important;
-text-decoration: none !important;
-color: white !important;
-}
-.dvc-header .menus > li:hover > .home {
-background: #E28217 !important;
-}
-.dvc-header .menus > li:hover > .home i {
-color: white !important;
-}
-.footer-margin{
-margin-bottom: -20px !important;
-}
-.footer-margin-fixed{
-/*        position: fixed !important;
+    font-family: 'Nunito', Arial !important;
+  }
+
+  .dvc-header .menus>li:hover>a {
+    height: 40px !important;
+    text-decoration: none !important;
+    color: white !important;
+  }
+
+  .dvc-header .menus>li:hover>.home {
+    background: #E28217 !important;
+  }
+
+  .dvc-header .menus>li:hover>.home i {
+    color: white !important;
+  }
+
+  .footer-margin {
+    margin-bottom: -20px !important;
+  }
+
+  .footer-margin-fixed {
+    /*        position: fixed !important;
 bottom: 0 !important;*/
-margin-top: 1% !important;
-}
-.footer-margin-bottom{
-position: fixed !important;
-bottom: 0 !important;
-}
-.dvc-btn-doc{
-font-size: 15px;
-padding-left: 0px;
-}
-.user-btn{
-margin-bottom: 5%;
-}
-.drop-hni{
-display: inline !important;
-margin-left: 20%;
-}
-.dropdown-menu-hni{
-position: relative !important;
-}
-.absolute{
-position: absolute;
-}
-.span-margin{
-margin-top: 12% !important;
-}
-.ul-index{
-z-index: 10000 !important;
-}
-.span-tong-dai-mobile{
-display:none;
-}
+    margin-top: 1% !important;
+  }
 
-/* For Mobile */
-@media screen and (max-width: 540px) {
-.dvc-btn-doc{
-  font-size: 15px !important;
-}
-.listhni-mobile{
-  margin-left: -25%;
-}
-.dropdown-menu-hni{
-  margin-left: 30% !important;
-}
-.dvc-top-banner{
-  height: 125px !important;
-}
-.span-tong-dai-mobile{
-  display:block;
-  margin-left: 9%;
-  margin-top: -7%;
-  font-size: 10px;
-}
-}
+  .footer-margin-bottom {
+    position: fixed !important;
+    bottom: 0 !important;
+  }
 
+  .dvc-btn-doc {
+    font-size: 15px;
+    padding-left: 0px;
+  }
+
+  .user-btn {
+    margin-bottom: 5%;
+  }
+
+  .drop-hni {
+    display: inline !important;
+    margin-left: 20%;
+  }
+
+  .dropdown-menu-hni {
+    position: relative !important;
+  }
+
+  .absolute {
+    position: absolute;
+  }
+
+  .span-margin {
+    margin-top: 12% !important;
+  }
+
+  .ul-index {
+    z-index: 10000 !important;
+  }
+
+  .span-tong-dai-mobile {
+    display: none;
+  }
+
+  /* For Mobile */
+  @media screen and (max-width: 540px) {
+    .dvc-btn-doc {
+      font-size: 15px !important;
+    }
+
+    .listhni-mobile {
+      margin-left: -25%;
+    }
+
+    .dropdown-menu-hni {
+      margin-left: 30% !important;
+    }
+
+    .dvc-top-banner {
+      height: 125px !important;
+    }
+
+    .span-tong-dai-mobile {
+      display: block;
+      margin-left: 9%;
+      margin-top: -7%;
+      font-size: 10px;
+    }
+  }
 </style>
 <html lang="vi">
+
 <head>
-<meta charset="utf-8">
-<title>Dịch vụ hành chính công thành phố Hà Nội</title>
-<base href="https://dichvucong.hanoi.gov.vn/">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-<meta charset="utf-8" />
-<meta name="keywords" content="test nhe! Xin chào mọi người nhe " />
-<meta content="IE=edge" http-equiv="X-UA-Compatible" />
-<meta content="width=device-width, initial-scale=1" name="viewport" id="viewport" />
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<link rel="icon" href="../public_new/img/logo.png">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> 
-<meta content="width=device-width, initial-scale=1" name="viewport" id="viewport" />
-<meta content="index, follow" name="ROBOTS">
-<meta name="description" content="Dịch vụ công Hà Nội">
-<meta name="author" content="iGate">
+  <meta charset="utf-8">
+  <title>Dịch vụ hành chính công thành phố Hà Nội</title>
+  <base href="https://dichvucong.hanoi.gov.vn/">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta charset="utf-8" />
+  <meta name="keywords" content="test nhe! Xin chào mọi người nhe " />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" id="viewport" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <link rel="icon" href="../public_new/img/logo.png">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" id="viewport" />
+  <meta content="index, follow" name="ROBOTS">
+  <meta name="description" content="Dịch vụ công Hà Nội">
+  <meta name="author" content="iGate">
 
-<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/public/libs/font-awesome-4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/public/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="/apps/hanoi/modules/resource/css/styles.css">
-<link rel="stylesheet" href="/apps/hanoi/modules/resource/css/styles1.css">
-<link rel="stylesheet" type="text/css" href="/apps/dichvucong/resources/vendor/css/ap8.css">
-<link rel="stylesheet" type="text/css" href="/apps/dichvucong/resources/vendor/css/slick.css">
-<link rel="stylesheet" type="text/css" href="/apps/dichvucong/resources/vendor/jquery-video/css/mediaelementplayer.css">
-<link rel="stylesheet" type="text/css" href="/apps/dichvucong/resources/vendor/select2/css/select2.min.css">
-<link rel="stylesheet" type="text/css" href="/public/css/subModal.css">
-<link rel="stylesheet" type="text/css" href="/apps/dichvucong/resources/css/btt.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/public/libs/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/public/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/apps/hanoi/modules/resource/css/styles.css">
+  <link rel="stylesheet" href="/apps/hanoi/modules/resource/css/styles1.css">
+  <link rel="stylesheet" type="text/css" href="/apps/dichvucong/resources/vendor/css/ap8.css">
+  <link rel="stylesheet" type="text/css" href="/apps/dichvucong/resources/vendor/css/slick.css">
+  <link rel="stylesheet" type="text/css"
+    href="/apps/dichvucong/resources/vendor/jquery-video/css/mediaelementplayer.css">
+  <link rel="stylesheet" type="text/css" href="/apps/dichvucong/resources/vendor/select2/css/select2.min.css">
+  <link rel="stylesheet" type="text/css" href="/public/css/subModal.css">
+  <link rel="stylesheet" type="text/css" href="/apps/dichvucong/resources/css/btt.css">
 
-<link href="/public/libs/jquery-ui-1.12.1/jquery-ui.min.css?v=20230501203913" rel="stylesheet" type="text/css"/><link href="/public/js/plugins/bootstrap-select/css/bootstrap-select.min.css?v=20230501203913" rel="stylesheet" type="text/css"/><link href="/public/css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css"/><link href="/public/css/datatables/jquery.dataTables.v1.10.19.css" rel="stylesheet" type="text/css"/><link href="/public/portal/js/jquery-pagination/jquery.pagination.css" rel="stylesheet" type="text/css"/><link href="/public/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/><link href="/public/js/Nth/FormBuilder/Css/Frontend.css?v=20230501203913" rel="stylesheet" type="text/css"/><link href="/public/js/Nth/File/Css/FileIcon.css?v=20230501203913" rel="stylesheet" type="text/css"/>    <script type="text/javascript" language="javascript">
-var SITE_ROOT = '/';
-var MA_TINH_THANH = '01';
-var cache_jscss_version = '20230501203913';
-var Nth_FormBuilder_Validator_File_defaultOptions = JSON.parse('{\"maxSize\":\"1024000000\"}');
-</script>
-<script src="/public/libs/jquery/jquery-3.2.1.min.js" language="javascript" type="text/javascript"></script><script src="/public/libs/jquery-ui-1.11.4/jquery-ui.js" language="javascript" type="text/javascript"></script><!--[if lt IE 9]><script src="/public/libs/respond.js" language="javascript" type="text/javascript"></script><![endif]--><script src="/public/socket.io-client/socket.io.js" language="javascript" type="text/javascript"></script><script src="/public/js/mylibs.js?v=20230501203913" language="javascript" type="text/javascript"></script><script src="/public/js/require.js" language="javascript" type="text/javascript"></script><script src="/public/js/main.js?v=20230501203913" language="javascript" type="text/javascript"></script>    <script type="text/javascript">
-$.ajaxSetup({
-data:{
-  tokenCsrf:'b24d28b10bd74f5a6a88c38464da04ae-7d09e65bd4e3871ec3f089ce5a867b06'
-}
-});
-</script>
-<script type="text/javascript">
-require(['bootstrap']);
-</script>
-
+  <link href="/public/libs/jquery-ui-1.12.1/jquery-ui.min.css?v=20230501203913" rel="stylesheet" type="text/css" />
+  <link href="/public/js/plugins/bootstrap-select/css/bootstrap-select.min.css?v=20230501203913" rel="stylesheet"
+    type="text/css" />
+  <link href="/public/css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href="/public/css/datatables/jquery.dataTables.v1.10.19.css" rel="stylesheet" type="text/css" />
+  <link href="/public/portal/js/jquery-pagination/jquery.pagination.css" rel="stylesheet" type="text/css" />
+  <link href="/public/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/public/js/Nth/FormBuilder/Css/Frontend.css?v=20230501203913" rel="stylesheet" type="text/css" />
+  <link href="/public/js/Nth/File/Css/FileIcon.css?v=20230501203913" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script type="text/javascript" language="javascript">
+    var SITE_ROOT = '/';
+    var MA_TINH_THANH = '01';
+    var cache_jscss_version = '20230501203913';
+    var Nth_FormBuilder_Validator_File_defaultOptions = JSON.parse('{\"maxSize\":\"1024000000\"}');
+  </script>
+  <script src="/public/libs/jquery/jquery-3.2.1.min.js" language="javascript" type="text/javascript"></script>
+  <script src="/public/libs/jquery-ui-1.11.4/jquery-ui.js" language="javascript" type="text/javascript"></script>
+  <!--[if lt IE 9]><script src="/public/libs/respond.js" language="javascript" type="text/javascript"></script><![endif]-->
+  <script src="/public/socket.io-client/socket.io.js" language="javascript" type="text/javascript"></script>
+  <script src="/public/js/mylibs.js?v=20230501203913" language="javascript" type="text/javascript"></script>
+  <script src="/public/js/require.js" language="javascript" type="text/javascript"></script>
+  <script src="/public/js/main.js?v=20230501203913" language="javascript" type="text/javascript"></script>
+  <script type="text/javascript">
+    $.ajaxSetup({
+      data: {
+        tokenCsrf: 'b24d28b10bd74f5a6a88c38464da04ae-7d09e65bd4e3871ec3f089ce5a867b06'
+      }
+    });
+  </script>
+  <script type="text/javascript">
+    require(['bootstrap']);
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body style="background: #F5F5F5;">
 
 
-<div class="dvc-top-banner">
+  <div class="dvc-top-banner">
 
-<div class="dvc-container">
-<div class="dvc-logo"> 
-  <div class="dvc-image">
-      <img alt="Portal Logo" src="/apps/hanoi/modules/resource/images/logo.png">
-  </div>
-  <div class="dvc-logo-text">
-                          <p class="dvc-headline">CỔNG DỊCH VỤ CÔNG TRỰC TUYẾN </p>
+    <div class="dvc-container">
+      <div class="dvc-logo">
+        <div class="dvc-image">
+          <img alt="Portal Logo" src="/apps/hanoi/modules/resource/images/logo.png">
+        </div>
+        <div class="dvc-logo-text">
+          <p class="dvc-headline">CỔNG DỊCH VỤ CÔNG TRỰC TUYẾN </p>
           <p class="dvc-headline">THÀNH PHỐ HÀ NỘI</p>
-                  </div>
-  <div class="span-tong-dai-mobile">
-      <i class="fa fa-phone fa-sm" aria-hidden="true" style="font-size: 22px; color:white"></i>
-      &nbsp;
-      <span>Tổng đài trực tuyến: 024. 1022 nhánh số 7</span>
-  </div>
-</div>
-<div class="nav-toggle"> <span class="fa fa-bars"></span></div>
-
-<div class="box-login">
-  <div class="row">
-                      
-                      <div class="login-register">
-          <a href="/dich-vu-cong/cong-dan/dang-ky-tai-khoan" class="btn btn-login dvc-btn" style="margin-left: 30px;margin-right: 4%;">
-              <span class="-ap icon"></span> Đăng ký
-          </a>
-          <a href="/dich-vu-cong/cong-dan/dang-nhap" class="btn btn-register dvc-btn">
-              <span class="-ap icon"></span> Đăng nhập
-          </a>
-      </div> 
-                      
-      <div class="span-tong-dai" style="margin-left: -5%;margin-top: 2%;">
-          <!-- <img src="/apps/hanoi/modules/resource/images/moblie1.png" width="20px"> -->
+        </div>
+        <div class="span-tong-dai-mobile">
           <i class="fa fa-phone fa-sm" aria-hidden="true" style="font-size: 22px; color:white"></i>
           &nbsp;
           <span>Tổng đài trực tuyến: 024. 1022 nhánh số 7</span>
+        </div>
       </div>
-  </div>                   
+      <div class="nav-toggle"> <span class="fa fa-bars"></span></div>
 
-</div>
-</div>
-</div>
-<div class="home-page">
+      <div class="box-login">
+        <div class="row">
 
-<div id="dvc-header-home" class="dvc-header">
-<div class="dvc-container relative">
-  <ul class="menus">
-      <li><div class="home"><a href="/"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a> </div></li>
-      <li><a class="a1" href="/hanoi/tiepnhanonline">Dịch vụ công trực tuyến</a></li>
-      <li><a class="a2" href="/dichvucong/bothutuc">Thủ tục hành chính</a></li>
+          <div class="login-register">
+            <a href="/dich-vu-cong/cong-dan/dang-ky-tai-khoan" class="btn btn-login dvc-btn"
+              style="margin-left: 30px;margin-right: 4%;">
+              <span class="-ap icon"></span> Đăng ký
+            </a>
+            <a href="/dich-vu-cong/cong-dan/dang-nhap" class="btn btn-register dvc-btn">
+              <span class="-ap icon"></span> Đăng nhập
+            </a>
+          </div>
 
+          <div class="span-tong-dai" style="margin-left: -5%;margin-top: 2%;">
+            <!-- <img src="/apps/hanoi/modules/resource/images/moblie1.png" width="20px"> -->
+            <i class="fa fa-phone fa-sm" aria-hidden="true" style="font-size: 22px; color:white"></i>
+            &nbsp;
+            <span>Tổng đài trực tuyến: 024. 1022 nhánh số 7</span>
+          </div>
+        </div>
 
-      <li><a class="a3" href="/dichvucong/hoidap"   id="click_pakn">Phản ánh kiến nghị thường gặp</a></li>               
-
-
-
-      <li><a class="a4" href="/dichvucong/congdan/huongdancongdan">Hướng dẫn</a></li>
-      <li><a href="https://form.gov.vn/!Krc3U" style="font-size: medium !important">Khảo sát trải nghiệm người dùng</a></li>
-      <div class="clearfix"></div>
-      <div class="box-login"> 
-          
-                              
-                          
-          <a href="/dich-vu-cong/cong-dan/dang-ky-tai-khoan" class="dvc-btn dvc-btn-doc"><span class="-ap icon icon-ion-person-add"></span> Đăng ký</a> 
-          <a href="/dich-vu-cong/cong-dan/dang-nhap" class="dvc-btn dvc-btn-doc"><span class="-ap icon icon-lock_open"></span> Đăng nhập</a> 
-      
-                      
       </div>
-  </ul>
-</div>
-</div>
+    </div>
+  </div>
+  <div class="home-page">
 
-</div>
-<script type="text/javascript">
-require(['jquery'],function(){
-  $( document ).ready(function() {
-      $(".nav-toggle").click(function(){
+    <div id="dvc-header-home" class="dvc-header">
+      <div class="dvc-container relative">
+        <ul class="menus">
+          <li>
+            <div class="home"><a href="/"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a> </div>
+          </li>
+          <li><a class="a1" href="/hanoi/tiepnhanonline">Dịch vụ công trực tuyến</a></li>
+          <li><a class="a2" href="/dichvucong/bothutuc">Thủ tục hành chính</a></li>
+
+
+          <li><a class="a3" href="/dichvucong/hoidap" id="click_pakn">Phản ánh kiến nghị thường gặp</a></li>
+
+
+
+          <li><a class="a4" href="/dichvucong/congdan/huongdancongdan">Hướng dẫn</a></li>
+          <li><a href="https://form.gov.vn/!Krc3U" style="font-size: medium !important">Khảo sát trải nghiệm người
+              dùng</a></li>
+          <div class="clearfix"></div>
+          <div class="box-login">
+
+
+
+            <a href="/dich-vu-cong/cong-dan/dang-ky-tai-khoan" class="dvc-btn dvc-btn-doc"><span
+                class="-ap icon icon-ion-person-add"></span> Đăng ký</a>
+            <a href="/dich-vu-cong/cong-dan/dang-nhap" class="dvc-btn dvc-btn-doc"><span
+                class="-ap icon icon-lock_open"></span> Đăng nhập</a>
+
+
+          </div>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <script type="text/javascript">
+    require(['jquery'], function () {
+      $(document).ready(function () {
+        $(".nav-toggle").click(function () {
 
           $("#dvc-header-home").addClass("active");
 
-          if($(this).hasClass("active")){
-              $(".dvc-header").removeClass("active");
-              $(this).removeClass("active");
-          }else{
-              $(".dvc-header").addClass("active");
-              $(this).addClass("active");
+          if ($(this).hasClass("active")) {
+            $(".dvc-header").removeClass("active");
+            $(this).removeClass("active");
+          } else {
+            $(".dvc-header").addClass("active");
+            $(this).addClass("active");
           }
+        });
+
+        //Edit footer
+        if (window.location.href.includes("cong-dan/dang-nhap") || window.location.href.includes("tiep-nhan-online/chon-truong-hop-ho-so") || window.location.href.includes("tiep-nhan-online/da-nop-ho-so")) {
+          if ($(".dvc-footer-hanoi").hasClass("footer-margin")) {
+            $(".dvc-footer-hanoi").removeClass("footer-margin");
+          }
+          if ($(".dvc-footer-hanoi").hasClass("footer-margin-bottom")) {
+            $(".dvc-footer-hanoi").removeClass("footer-margin-bottom");
+          }
+          if (!$(".dvc-footer-hanoi").hasClass("footer-margin-fixed")) {
+            $(".dvc-footer-hanoi").addClass("footer-margin-fixed");
+          }
+        } else if (window.location.href.includes("tiep-nhan-online/thong-bao-loi")) {
+          if ($(".dvc-footer-hanoi").hasClass("footer-margin-fixed")) {
+            $(".dvc-footer-hanoi").removeClass("footer-margin-fixed");
+          }
+          if ($(".dvc-footer-hanoi").hasClass("footer-margin")) {
+            $(".dvc-footer-hanoi").removeClass("footer-margin");
+          }
+          if (!$(".dvc-footer-hanoi").hasClass("footer-margin-bottom")) {
+            $(".dvc-footer-hanoi").addClass("footer-margin-bottom");
+          }
+        } else {
+          if ($(".dvc-footer-hanoi").hasClass("footer-margin-fixed")) {
+            $(".dvc-footer-hanoi").removeClass("footer-margin-fixed");
+          }
+          if ($(".dvc-footer-hanoi").hasClass("footer-margin-bottom")) {
+            $(".dvc-footer-hanoi").removeClass("footer-margin-bottom");
+          }
+          if (!$(".dvc-footer-hanoi").hasClass("footer-margin")) {
+            $(".dvc-footer-hanoi").addClass("footer-margin");
+          }
+        }
       });
-      
-      //Edit footer
-      if(window.location.href.includes("cong-dan/dang-nhap") || window.location.href.includes("tiep-nhan-online/chon-truong-hop-ho-so") || window.location.href.includes("tiep-nhan-online/da-nop-ho-so")){
-          if($(".dvc-footer-hanoi").hasClass("footer-margin")){
-              $(".dvc-footer-hanoi").removeClass("footer-margin");
-          }
-          if($(".dvc-footer-hanoi").hasClass("footer-margin-bottom")){
-              $(".dvc-footer-hanoi").removeClass("footer-margin-bottom");
-          }
-          if(!$(".dvc-footer-hanoi").hasClass("footer-margin-fixed")){
-              $(".dvc-footer-hanoi").addClass("footer-margin-fixed");
-          }
-      }else if(window.location.href.includes("tiep-nhan-online/thong-bao-loi")){
-          if($(".dvc-footer-hanoi").hasClass("footer-margin-fixed")){
-              $(".dvc-footer-hanoi").removeClass("footer-margin-fixed");
-          }
-          if($(".dvc-footer-hanoi").hasClass("footer-margin")){
-              $(".dvc-footer-hanoi").removeClass("footer-margin");
-          }
-          if(!$(".dvc-footer-hanoi").hasClass("footer-margin-bottom")){
-              $(".dvc-footer-hanoi").addClass("footer-margin-bottom");
-          }
-      }else{
-          if($(".dvc-footer-hanoi").hasClass("footer-margin-fixed")){
-              $(".dvc-footer-hanoi").removeClass("footer-margin-fixed");
-          }
-          if($(".dvc-footer-hanoi").hasClass("footer-margin-bottom")){
-              $(".dvc-footer-hanoi").removeClass("footer-margin-bottom");
-          }
-          if(!$(".dvc-footer-hanoi").hasClass("footer-margin")){
-              $(".dvc-footer-hanoi").addClass("footer-margin");
-          }
-      }
-  });
-});
+    });
 
-  $( document.body ).click(function() {
-      if($(".dropdown-menu-hni").is(":visible")){
-          if($(".listhni").hasClass("absolute")){
-              $(".listhni").removeClass("absolute");
-          }
-          if($(".span-tong-dai").hasClass("span-margin")){
-              $(".span-tong-dai").removeClass("span-margin");
-          }
-          if($(".dropdown-menu-hni").hasClass("ul-index")){
-              $(".dropdown-menu-hni").removeClass("ul-index");
-          }
+    $(document.body).click(function () {
+      if ($(".dropdown-menu-hni").is(":visible")) {
+        if ($(".listhni").hasClass("absolute")) {
+          $(".listhni").removeClass("absolute");
+        }
+        if ($(".span-tong-dai").hasClass("span-margin")) {
+          $(".span-tong-dai").removeClass("span-margin");
+        }
+        if ($(".dropdown-menu-hni").hasClass("ul-index")) {
+          $(".dropdown-menu-hni").removeClass("ul-index");
+        }
       }
-  });
+    });
 
-function check(){
-   if($(".dropdown-menu-hni").is(":visible")){//Đóng lại
-      //alert("The paragraph  is visible.");
-          if($(".listhni").hasClass("absolute")){
-              $(".listhni").removeClass("absolute");
-          }
-          if($(".span-tong-dai").hasClass("span-margin")){
-              $(".span-tong-dai").removeClass("span-margin");
-          }
-          if($(".dropdown-menu-hni").hasClass("ul-index")){
-              $(".dropdown-menu-hni").removeClass("ul-index");
-          }
-  } else{//Mở ra
-      //alert("The paragraph  is hidden.");
-          if(!$(".listhni").hasClass("absolute")){
-              $(".listhni").addClass("absolute");
-          }
-          if(!$(".span-tong-dai").hasClass("span-margin")){
-              $(".span-tong-dai").addClass("span-margin");
-          }
-          if(!$(".dropdown-menu-hni").hasClass("ul-index")){
-              $(".dropdown-menu-hni").addClass("ul-index");
-          }
-  }
-}
+    function check() {
+      if ($(".dropdown-menu-hni").is(":visible")) {//Đóng lại
+        //alert("The paragraph  is visible.");
+        if ($(".listhni").hasClass("absolute")) {
+          $(".listhni").removeClass("absolute");
+        }
+        if ($(".span-tong-dai").hasClass("span-margin")) {
+          $(".span-tong-dai").removeClass("span-margin");
+        }
+        if ($(".dropdown-menu-hni").hasClass("ul-index")) {
+          $(".dropdown-menu-hni").removeClass("ul-index");
+        }
+      } else {//Mở ra
+        //alert("The paragraph  is hidden.");
+        if (!$(".listhni").hasClass("absolute")) {
+          $(".listhni").addClass("absolute");
+        }
+        if (!$(".span-tong-dai").hasClass("span-margin")) {
+          $(".span-tong-dai").addClass("span-margin");
+        }
+        if (!$(".dropdown-menu-hni").hasClass("ul-index")) {
+          $(".dropdown-menu-hni").addClass("ul-index");
+        }
+      }
+    }
 
 //        function menucanhan(){
 //            $('.dropdown-menu').attr("style","display:block;");
 //        }
-</script><style type="text/css">
-.circle-info-half{
-font-size:30px;
-color:#219635;
-}
-.circle-text-half{
-color:#808080;
-}
-.dot1 {
-height: 20px;
-width: 20px;
-background-color: #219635;
-border-radius: 50%;
-display: inline-block;
-margin-bottom: 15px;
-}
-.dot2 {
-height: 20px;
-width: 20px;
-background-color: #BDE0CC;
-border-radius: 50%;
-display: inline-block;
-}
-.titledot{
-padding-left: 5px;
-}
-.divdot{
-display: inline-flex;
-}
-.input-group{
-width: 170px;
-margin-left: 330px;
-margin-top: -175px;
-}
-.inputtext{
-background: #f1f1f1;
-height: 50px;
-border: 1px solid #D8D8D8;
-width: 95%;
-}
-.item{
-margin-left: -6%;
-padding-left: 3%;
-}
-.item a {
-color: #1E2F41 !important;
-text-decoration: none !important;
-font-weight: bold;
-}
-.item img{
-padding-right: 1%;
-}
-.namthongke{
-border: 1px solid #CCCCCC;
-border-radius: 5px;
-width: 100%;
-height: 28px;
-border-right: 0px;
-margin-left: 2%;
-padding-left: 5px;
-border-bottom-right-radius: unset;
-border-top-right-radius: unset;
-}
-.tabcontentTKTT select {
--moz-appearance: none;
--webkit-appearance: none;
-}
-.tabcontentTKTT select::-ms-expand {
-display: none;
-}
-.contentTKTT .tablinksTKTT{
-padding-right: 3%;
-}
-.row-action{
-margin-left: -100%;
-}
-.dvctthome {
-margin: 10px 0 23px 0;
-background-color: #fff;
-}
+  </script>
+  <style type="text/css">
+    .circle-info-half {
+      font-size: 30px;
+      color: #219635;
+    }
 
-.dvctthome-title {
-padding: 0 0;
-background: rgba(255, 255, 255, 0.2);
-height: 50px;
-border-radius: 8px 8px 0px 0px;
-margin-bottom: 5px;
-}
-.dvctthome-showtt {
-border: 1px solid #ccc;
-border-top: none;
-border-radius: 0px 0px 8px 8px;
-box-shadow: 0px 2px 4px rgb(0 0 0 / 14%);
-padding: 10px 0;
-}
-.dvctthome-item {
-padding: 5px 4%;
-margin: 0;
-position: relative;
-}
-/*.dvctthome-item:before {*/
-/*content: '';*/
-/*width: 5px;*/
-/*height: 5px;*/
-/*display: block;*/
-/*background-color: #E28217;*/
-/*position: absolute;*/
-/*top: 15px;*/
-/*left: -15px;*/
-/*}*/
+    .circle-text-half {
+      color: #808080;
+    }
 
-.dvctthome-link {
-overflow: hidden;
-display: -webkit-box;
--webkit-box-orient: vertical;
--webkit-line-clamp: 1;
-height: 52px;
-font-size: 16px;
-line-height: 31px;
-color: #000000;
-padding: 10px 18px;
-border-radius: 7px;
-background-color: #F5F5F5;
-}
+    .dot1 {
+      height: 20px;
+      width: 20px;
+      background-color: #219635;
+      border-radius: 50%;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
 
-.dvctthome-link:hover {
-color: #E28217;
-text-decoration: unset;
-}
+    .dot2 {
+      height: 20px;
+      width: 20px;
+      background-color: #BDE0CC;
+      border-radius: 50%;
+      display: inline-block;
+    }
 
-.tab .tablinks-text {
-background-size: 342px 50px;
-width: 342px;
-}
-.tab .tablinks-text span{
-display: block;
-width: 300px;
-}
-/* For Mobile */
-@media screen and (max-width: 540px) {
-.contentCD {
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 10%;
-}
-.tab{
-  margin-top: -10%;
-  display: inline-flex;
-  width: 100%;
-}
-.item{
-  margin-left: 10%;
-}
-.contentCD .tablinks{
-  font-size: 15px;
-  padding-bottom: 5%;
-}
-.contentTKTT {
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 15%;
-}
-.contentTKTT .tablinksTKTT{
-  font-size: 13px;
-}
-#tabTCHS{
-  display:none;
-}
-.linengang{
-  top: 12px;
-}
-#kqxlhs{
-  height:500px !important;
-  margin-top: 5%;
-  width: 100%;
-  margin-left: 0.5%;
-}
-#kqxlhs .thongkehs{
-  margin-top: -2% !important;
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-}
-#kqxlhs .bieudo{
-  margin-left:0px !important;
-}
-.tabcontentTKTT .so-ho-so{
-  width: 60%;
-  margin-left: 5%;
-}
-.tabcontentTKTT .datecss{
-  margin-left: 40% !important;
-  margin-top: -250px !important;
-}
-.tabcontentTKTT .namthongke{
-  margin-left: 20% !important;
-}
-.tabcontentTKTT .titlecss{
-  margin-left: 15% !important;
-  margin-top: 20% !important;
-}
-#traCuu{
-  height:550px !important;
-  margin-top: 5%;
-  width: 100%;
-  margin-left: 0.5%;
-}
-#traCuu .traCuuicon{
-  margin-top: -10% !important;
-  margin-left: 30% !important;
-  background: unset !important;
-}
-#traCuu .traCuufilter{
-  margin-left: 50% !important;
-  margin-top: -5% !important;
-  width: 85%;
-  background: unset !important;
-}
-#traCuu .txtfilter{
-  margin-left: -45% !important;
-  background: unset !important;
-}
-.home-page {
-  background-size: 200% !important;
-  margin-top: -22%;
-}
-.box-login .dvc-btn{
-  font-size: 15px !important;
-}
+    .titledot {
+      padding-left: 5px;
+    }
 
-.imgTK img {
-  margin-left: 0% !important;
-}
-.divdot{
-  margin-left: 0% !important;
-  font-size: 100% !important;
-}
-.dot1 {
-  width: 20px !important;
-}
-.row-action{
-  display: contents;
-}
-.dvctthome {
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 15%;
-}
-.dvctthome-title {
-  height: 10px;
-}
-.dvctthome-title .linengang {
-  display: none;
-}
-.tab .tablinks-text {
-  background-size: 100% 50px;
-  width: 100%;
-}
-}
+    .divdot {
+      display: inline-flex;
+    }
 
-/* For Tablets */
-@media screen and (min-width: 540px) and (max-width: 780px) {
-.home-page {
-  background-size: 100% !important;
-  margin-top: -10%;
-}
-.box-login .dvc-btn{
-  font-size: 15px !important;
-}
-.contentCD {
-  width: 95%;
-  margin-left: 2.5%;
-}
-.box-search{
-  margin-left: 115%;
-  margin-top: -17%;
-  display: inline-block !important;
-}
-.tab{
-  display: inline-flex;
-  width: 90%;
-}
-.tab .tablinks{
-  background-position-x: right;
-  padding-right: 5% !important;
-}
-.tab .tablinksTKTT{
-  background-position-x: right;
-  padding-right: 5% !important;
-}
-.contentTKTT {
-  width: 95%;
-  margin-left: 2.5%;
-}
-.contentTKTT .tablinksTKTT{
-  font-size: 13px;
-}
-#tabTCHS{
-  display:none;
-}
-#kqxlhs{
-  height:260px !important;
-}
-#kqxlhs .thongkehs{
-  margin-left: 2% !important;
-  margin-right: 0px !important;
-}
-#kqxlhs .imgTK{
-  margin-left: -5% !important;
-}
-#kqxlhs .so-ho-so{
-  margin-left: 5% !important;
-}
-#kqxlhs .bieudo{
-  margin-left:-2% !important;
-}
-.tabcontentTKTT .datecss{
-  margin-left: 50%;
-  margin-top: -77%;
-}
-.tabcontentTKTT .titlecss{
-  margin-left: 10% !important;
-  margin-top: 16% !important;
-}
-#traCuu .traCuuicon{
-  margin-top: 0% !important;
-  margin-left: 5% !important;
-}
-#traCuu .traCuufilter{
-  margin-left: -2% !important;
-}
-#traCuu .btntracuucss{
-  margin-left: 80% !important;
-  margin-top: -9% !important;
-  width: 20% !important;
-  background: unset !important;
-}
+    .input-group {
+      width: 170px;
+      margin-left: 330px;
+      margin-top: -175px;
+    }
 
-.imgTK img {
-  margin-left: 0% !important;
-}
-.divdot{
-  margin-left: 0% !important;
-  font-size: 100% !important;
-}
-.dot1 {
-  width: 20px !important;
-}
-}
+    .inputtext {
+      background: #f1f1f1;
+      height: 50px;
+      border: 1px solid #D8D8D8;
+      width: 95%;
+    }
 
-/* For Others */
-@media screen and (min-width: 780px) and (max-width: 1024px) {
-.tab{
-  display: inline-flex;
-}
-.tabcontentTKTT .datecss{
-  margin-left: 75%;
-}
-.tabcontentTKTT .titlecss{
-  margin-left: 70% !important;
-  margin-top: -15px !important;
-  width: 50% !important;
-}
-#traCuu .traCuufilter{
-  margin-left: -5% !important;
-}
-}
+    .item {
+      margin-left: -6%;
+      padding-left: 3%;
+    }
 
-@media screen and (max-width: 985px) and (max-height: 540px)
-{
- .thongkehs{
-     background: unset !important;
-     margin-left: -2%;
- }
- .imgTK img{
-     margin-left: -7%;
- }
- .bieudo{
-     background: unset !important;
- }
- .divdot{
-     margin-left: 30%;
-     font-size: 12px;
- }
- .dot1 {
-     width: 26px;
- }
-}
-.btn-min{
-  padding: 5px;
-float: left;
-background: #f1f1f1;
-border-left: none;
-cursor: pointer;
-height: 30px;
-width: 40%;
-}
-</style>
+    .item a {
+      color: #1E2F41 !important;
+      text-decoration: none !important;
+      font-weight: bold;
+    }
 
-<div class="main-wrapper dvc-main-wrap" style="position: relative; margin-top: -260px;" >
-<!-- background: #F5F5F5 -->
-<div class="dvc-container" style="padding: 0 0;" >
+    .item img {
+      padding-right: 1%;
+    }
 
-<div class="container" style="padding: 0 0;" >
+    .namthongke {
+      border: 1px solid #CCCCCC;
+      border-radius: 5px;
+      width: 100%;
+      height: 28px;
+      border-right: 0px;
+      margin-left: 2%;
+      padding-left: 5px;
+      border-bottom-right-radius: unset;
+      border-top-right-radius: unset;
+    }
 
-  <div class="row" style="padding: 0 0;" >
+    .tabcontentTKTT select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+    }
 
-      <div class="main-container" style="padding: 0 0;" >
+    .tabcontentTKTT select::-ms-expand {
+      display: none;
+    }
 
-          <div class="contentCD" style="">
+    .contentTKTT .tablinksTKTT {
+      padding-right: 3%;
+    }
 
-              <div class="col-sm-12 col-xs-12" style="padding: 0 0;background: rgba(255, 255, 255, 0.2);height: 50px; border-radius: 8px 8px 0px 0px;" >
-                  
-                  <div class="col-sm-6" style="padding: 0 0;">
-                      <div class="tab">
-                          <button class="tablinks active" onclick="openTab(event, 'congDan')">CÔNG DÂN</button>
-                          <button class="tablinks" onclick="openTab(event, 'doanhNghiep')">DOANH NGHIỆP</button>
-                      </div>
+    .row-action {
+      margin-left: -100%;
+    }
+
+    .dvctthome {
+      margin: 10px 0 23px 0;
+      background-color: #fff;
+    }
+
+    .dvctthome-title {
+      padding: 0 0;
+      background: rgba(255, 255, 255, 0.2);
+      height: 50px;
+      border-radius: 8px 8px 0px 0px;
+      margin-bottom: 5px;
+    }
+
+    .dvctthome-showtt {
+      border: 1px solid #ccc;
+      border-top: none;
+      border-radius: 0px 0px 8px 8px;
+      box-shadow: 0px 2px 4px rgb(0 0 0 / 14%);
+      padding: 10px 0;
+    }
+
+    .dvctthome-item {
+      padding: 5px 4%;
+      margin: 0;
+      position: relative;
+    }
+
+    /*.dvctthome-item:before {*/
+    /*content: '';*/
+    /*width: 5px;*/
+    /*height: 5px;*/
+    /*display: block;*/
+    /*background-color: #E28217;*/
+    /*position: absolute;*/
+    /*top: 15px;*/
+    /*left: -15px;*/
+    /*}*/
+
+    .dvctthome-link {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      height: 52px;
+      font-size: 16px;
+      line-height: 31px;
+      color: #000000;
+      padding: 10px 18px;
+      border-radius: 7px;
+      background-color: #F5F5F5;
+    }
+
+    .dvctthome-link:hover {
+      color: #E28217;
+      text-decoration: unset;
+    }
+
+    .tab .tablinks-text {
+      background-size: 342px 50px;
+      width: 342px;
+    }
+
+    .tab .tablinks-text span {
+      display: block;
+      width: 300px;
+    }
+
+    /* For Mobile */
+    @media screen and (max-width: 540px) {
+      .contentCD {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 10%;
+      }
+
+      .tab {
+        margin-top: -10%;
+        display: inline-flex;
+        width: 100%;
+      }
+
+      .item {
+        margin-left: 10%;
+      }
+
+      .contentCD .tablinks {
+        font-size: 15px;
+        padding-bottom: 5%;
+      }
+
+      .contentTKTT {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 15%;
+      }
+
+      .contentTKTT .tablinksTKTT {
+        font-size: 13px;
+      }
+
+      #tabTCHS {
+        display: none;
+      }
+
+      .linengang {
+        top: 12px;
+      }
+
+      #kqxlhs {
+        height: 500px !important;
+        margin-top: 5%;
+        width: 100%;
+        margin-left: 0.5%;
+      }
+
+      #kqxlhs .thongkehs {
+        margin-top: -2% !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+      }
+
+      #kqxlhs .bieudo {
+        margin-left: 0px !important;
+      }
+
+      .tabcontentTKTT .so-ho-so {
+        width: 60%;
+        margin-left: 5%;
+      }
+
+      .tabcontentTKTT .datecss {
+        margin-left: 40% !important;
+        margin-top: -250px !important;
+      }
+
+      .tabcontentTKTT .namthongke {
+        margin-left: 20% !important;
+      }
+
+      .tabcontentTKTT .titlecss {
+        margin-left: 15% !important;
+        margin-top: 20% !important;
+      }
+
+      #traCuu {
+        height: 550px !important;
+        margin-top: 5%;
+        width: 100%;
+        margin-left: 0.5%;
+      }
+
+      #traCuu .traCuuicon {
+        margin-top: -10% !important;
+        margin-left: 30% !important;
+        background: unset !important;
+      }
+
+      #traCuu .traCuufilter {
+        margin-left: 50% !important;
+        margin-top: -5% !important;
+        width: 85%;
+        background: unset !important;
+      }
+
+      #traCuu .txtfilter {
+        margin-left: -45% !important;
+        background: unset !important;
+      }
+
+      .home-page {
+        background-size: 200% !important;
+        margin-top: -22%;
+      }
+
+      .box-login .dvc-btn {
+        font-size: 15px !important;
+      }
+
+      .imgTK img {
+        margin-left: 0% !important;
+      }
+
+      .divdot {
+        margin-left: 0% !important;
+        font-size: 100% !important;
+      }
+
+      .dot1 {
+        width: 20px !important;
+      }
+
+      .row-action {
+        display: contents;
+      }
+
+      .dvctthome {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 15%;
+      }
+
+      .dvctthome-title {
+        height: 10px;
+      }
+
+      .dvctthome-title .linengang {
+        display: none;
+      }
+
+      .tab .tablinks-text {
+        background-size: 100% 50px;
+        width: 100%;
+      }
+    }
+
+    /* For Tablets */
+    @media screen and (min-width: 540px) and (max-width: 780px) {
+      .home-page {
+        background-size: 100% !important;
+        margin-top: -10%;
+      }
+
+      .box-login .dvc-btn {
+        font-size: 15px !important;
+      }
+
+      .contentCD {
+        width: 95%;
+        margin-left: 2.5%;
+      }
+
+      .box-search {
+        margin-left: 115%;
+        margin-top: -17%;
+        display: inline-block !important;
+      }
+
+      .tab {
+        display: inline-flex;
+        width: 90%;
+      }
+
+      .tab .tablinks {
+        background-position-x: right;
+        padding-right: 5% !important;
+      }
+
+      .tab .tablinksTKTT {
+        background-position-x: right;
+        padding-right: 5% !important;
+      }
+
+      .contentTKTT {
+        width: 95%;
+        margin-left: 2.5%;
+      }
+
+      .contentTKTT .tablinksTKTT {
+        font-size: 13px;
+      }
+
+      #tabTCHS {
+        display: none;
+      }
+
+      #kqxlhs {
+        height: 260px !important;
+      }
+
+      #kqxlhs .thongkehs {
+        margin-left: 2% !important;
+        margin-right: 0px !important;
+      }
+
+      #kqxlhs .imgTK {
+        margin-left: -5% !important;
+      }
+
+      #kqxlhs .so-ho-so {
+        margin-left: 5% !important;
+      }
+
+      #kqxlhs .bieudo {
+        margin-left: -2% !important;
+      }
+
+      .tabcontentTKTT .datecss {
+        margin-left: 50%;
+        margin-top: -77%;
+      }
+
+      .tabcontentTKTT .titlecss {
+        margin-left: 10% !important;
+        margin-top: 16% !important;
+      }
+
+      #traCuu .traCuuicon {
+        margin-top: 0% !important;
+        margin-left: 5% !important;
+      }
+
+      #traCuu .traCuufilter {
+        margin-left: -2% !important;
+      }
+
+      #traCuu .btntracuucss {
+        margin-left: 80% !important;
+        margin-top: -9% !important;
+        width: 20% !important;
+        background: unset !important;
+      }
+
+      .imgTK img {
+        margin-left: 0% !important;
+      }
+
+      .divdot {
+        margin-left: 0% !important;
+        font-size: 100% !important;
+      }
+
+      .dot1 {
+        width: 20px !important;
+      }
+    }
+
+    /* For Others */
+    @media screen and (min-width: 780px) and (max-width: 1024px) {
+      .tab {
+        display: inline-flex;
+      }
+
+      .tabcontentTKTT .datecss {
+        margin-left: 75%;
+      }
+
+      .tabcontentTKTT .titlecss {
+        margin-left: 70% !important;
+        margin-top: -15px !important;
+        width: 50% !important;
+      }
+
+      #traCuu .traCuufilter {
+        margin-left: -5% !important;
+      }
+    }
+
+    @media screen and (max-width: 985px) and (max-height: 540px) {
+      .thongkehs {
+        background: unset !important;
+        margin-left: -2%;
+      }
+
+      .imgTK img {
+        margin-left: -7%;
+      }
+
+      .bieudo {
+        background: unset !important;
+      }
+
+      .divdot {
+        margin-left: 30%;
+        font-size: 12px;
+      }
+
+      .dot1 {
+        width: 26px;
+      }
+    }
+
+    .btn-min {
+      padding: 5px;
+      float: left;
+      background: #f1f1f1;
+      border-left: none;
+      cursor: pointer;
+      height: 30px;
+      width: 40%;
+    }
+
+    .is-hidden {
+      display: none;
+    }
+
+    .cursor-pointer {
+      cursor: pointer;
+    }
+
+    .name-city {
+      font-size: 14px;
+    }
+
+    .item-city-active {
+      background-color: #e28217;
+      border-color: transparent;
+      color: #fff;
+    }
+
+    .chart-fake {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background-color: #219635;
+
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 20px;
+    }
+
+    .chart-fake .chart-fake-value {
+      display: flex;
+      height: 250px;
+      width: 250px;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: #fff;
+    }
+  </style>
+
+  <div class="main-wrapper dvc-main-wrap" style="position: relative; margin-top: -260px;">
+    <!-- background: #F5F5F5 -->
+    <div class="dvc-container" style="padding: 0 0;">
+
+      <div class="container" style="padding: 0 0;">
+
+        <div class="row" style="padding: 0 0;">
+
+          <div class="main-container" style="padding: 0 0;">
+
+            <div class="contentCD" style="">
+
+              <div class="col-sm-12 col-xs-12"
+                style="padding: 0 0;background: rgba(255, 255, 255, 0.2);height: 50px; border-radius: 8px 8px 0px 0px;">
+
+                <div class="col-sm-6" style="padding: 0 0;">
+                  <div class="tab">
+                    <button class="tablinks active" onclick="openTab(event, 'congDan')">CÔNG DÂN</button>
+                    <button class="tablinks" onclick="openTab(event, 'doanhNghiep')">DOANH NGHIỆP</button>
                   </div>
-                  <div class="col-sm-6" style="padding: 10px 4%; text-align: center; align-content: center;">
-                      <div class="box-search box-search-max" style="">
-                          <form class="example" style="padding: 0px 2%; width: 84%">
-                              <input type="text" placeholder="Nhập từ khóa tìm kiếm..." id="tuKhoa">
-                              <button id="home-search" class="btn-max">Tìm kiếm nâng cao <i class="fa fa-search"></i></button>
-                              <button id="home-search1" onclick="searchtt()" class="btn-min"><i class="fa fa-search"></i></button>
-                          </form>
-                      </div>
+                </div>
+                <div class="col-sm-6" style="padding: 10px 4%; text-align: center; align-content: center;">
+                  <div class="box-search box-search-max" style="">
+                    <form class="example" style="padding: 0px 2%; width: 84%">
+                      <input type="text" placeholder="Nhập từ khóa tìm kiếm..." id="tuKhoa">
+                      <button id="home-search" class="btn-max">Tìm kiếm nâng cao <i class="fa fa-search"></i></button>
+                      <button id="home-search1" onclick="searchtt()" class="btn-min"><i
+                          class="fa fa-search"></i></button>
+                    </form>
                   </div>
+                </div>
               </div>
-              <div class="col-sm-12" style="border-bottom: 5px solid #E28217; padding: 0 0;" > </div>
+              <div class="col-sm-12" style="border-bottom: 5px solid #E28217; padding: 0 0;"> </div>
 
-              <div id="congDan"  class="col-sm-12 tabcontent" style="display: block; padding: 0 0;">
-                  <div class="col-sm-6" style="padding: 5px 4%;">
-                      <div class="box-search box-search-min">
-                          <form class="example" style="padding: 0px 2%; width: 92%">
-                              <input type="text" placeholder="Nhập từ khóa tìm kiếm..." id="tuKhoa1">
-                              <button id="home-search" class="btn-max">Tìm kiếm nâng cao <i class="fa fa-search"></i></button>
-                              <span id="home-search1" onclick="searchtt1()" class="btn-min"><i class="fa fa-search"></i></span>
-                          </form>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G15-TP07&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&P_PHUONG_XA=null&tab=0&page=1&P_FILTER0=G15-TP07,,,,&P_FILTER1=&P_FILTER2=&P_MA_DOI_TUONG=">Hộ tịch</a>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/congdan/chung_thuc.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G15-TP03&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&P_PHUONG_XA=null&tab=0&page=1&P_FILTER0=G15-TP03,,,,&P_FILTER1=&P_FILTER2=&P_MA_DOI_TUONG=">Chứng thực</a>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/congdan/bao_tro_xa_hoi.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G07-LD03&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&P_PHUONG_XA=null&tab=0&page=1&P_FILTER0=G07-LD03,,,,&P_FILTER1=&P_FILTER2=&P_MA_DOI_TUONG=">Bảo trợ xã hội</a>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/congdan/dang_ky_cu_tru.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G17-XD11&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=1&page=1&P_FILTER1=G17-XD11,,,,&P_FILTER0=&P_FILTER2=&P_MA_DOI_TUONG=">Hoạt động xây dựng</a>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/congdan/an_toan_lao_dong.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G07-LD01&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=1&page=1&P_FILTER1=G07-LD01,,,,&P_FILTER0=&P_FILTER2=&P_MA_DOI_TUONG=">An toàn lao động</a>
-                      </div>
+              <div id="congDan" class="col-sm-12 tabcontent" style="display: block; padding: 0 0;">
+                <div class="col-sm-6" style="padding: 5px 4%;">
+                  <div class="box-search box-search-min">
+                    <form class="example" style="padding: 0px 2%; width: 92%">
+                      <input type="text" placeholder="Nhập từ khóa tìm kiếm..." id="tuKhoa1">
+                      <button id="home-search" class="btn-max">Tìm kiếm nâng cao <i class="fa fa-search"></i></button>
+                      <span id="home-search1" onclick="searchtt1()" class="btn-min"><i class="fa fa-search"></i></span>
+                    </form>
                   </div>
-                  <div class="col-sm-6" style="padding: 5px 4%;">
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/congdan/ql_dat.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G13-TN02&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G13-TN02,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Quản lý đất đai</a>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/congdan/duong_bo.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G04-GT02&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G04-GT02,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Đường bộ</a>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/congdan/nguoi_co_cong.png" style="margin-left: 1.5%;padding-right: 2%;">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G07-LD09&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G07-LD09,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Người có công</a>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/congdan/y_te.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=000_00_19_H26&tab=2&page=1&P_FILTER2=,,000_00_19_H26,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Y tế</a>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/congdan/giao_duc_dao_tao.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=000_00_04_H26&tab=2&page=1&P_FILTER2=,,000_00_04_H26,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Giáo dục và đào tạo</a>
-                      </div>
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G15-TP07&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&P_PHUONG_XA=null&tab=0&page=1&P_FILTER0=G15-TP07,,,,&P_FILTER1=&P_FILTER2=&P_MA_DOI_TUONG=">Hộ
+                      tịch</a>
                   </div>
-                                          </div>
-
-              <div id="doanhNghiep"  class="col-sm-12 tabcontent" style="padding: 0 0;">
-                  <div class="col-sm-6" style="padding: 5px 4%;">
-                      <div class="box-search box-search-min">
-                          <form class="example" style="padding: 0px 2%; width: 92%">
-                              <input type="text" placeholder="Nhập từ khóa tìm kiếm..." id="tuKhoa2">
-                              <button id="home-search" class="btn-max">Tìm kiếm nâng cao <i class="fa fa-search"></i></button>
-                              <span id="home-search1" onclick="searchtt2()" class="btn-min"><i class="fa fa-search"></i></span>
-                          </form>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/doanhnghiep/linh_vuc_dau_tu.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G05-KD07&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G05-KD07,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Khởi sự kinh doanh</a>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/doanhnghiep/an_toan_lao_dong.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G07-LD01&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=1&page=1&P_FILTER1=G07-LD01,,,,&P_FILTER0=&P_FILTER2=&P_MA_DOI_TUONG=">An toàn lao động</a>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/doanhnghiep/dv_thuong_mai.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G02-CT07&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G02-CT07,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Dịch vụ thương mại</a>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/doanhnghiep/cong_thuong.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=000_00_02_H26&tab=2&page=1&P_FILTER2=,,000_00_02_H26,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Công thương</a>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/doanhnghiep/ql_dau_tu_xay_dung.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G17-XD15&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G17-XD15,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Xây dựng</a>
-                      </div>
-
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/congdan/chung_thuc.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G15-TP03&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&P_PHUONG_XA=null&tab=0&page=1&P_FILTER0=G15-TP03,,,,&P_FILTER1=&P_FILTER2=&P_MA_DOI_TUONG=">Chứng
+                      thực</a>
                   </div>
-                  <div class="col-sm-6" style="padding: 5px 4%;">
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/doanhnghiep/xuc_tien_thuong_mai.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G02-CT23&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G02-CT23,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Xúc tiến thương mại</a>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/doanhnghiep/so_huu_tri_tue.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G06-KC03&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G06-KC03,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Sở hữu trí tuệ</a>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/doanhnghiep/xuat_ban.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G14-TT11&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G14-TT11,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Xuất bản</a>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/doanhnghiep/buu_chinh.png">
-                          <a href="hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G14-TT03&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G14-TT03,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Bưu chính</a>
-                      </div>
-                      <div class="item">
-                          <img src="/apps/hanoi/modules/resource/images/doanhnghiep/ha_tang_do_thi.png">
-                          <a href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G13-TN09&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G13-TN09,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Môi trường</a>
-                      </div>
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/congdan/bao_tro_xa_hoi.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G07-LD03&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&P_PHUONG_XA=null&tab=0&page=1&P_FILTER0=G07-LD03,,,,&P_FILTER1=&P_FILTER2=&P_MA_DOI_TUONG=">Bảo
+                      trợ xã hội</a>
                   </div>
-                                          </div>
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/congdan/dang_ky_cu_tru.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G17-XD11&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=1&page=1&P_FILTER1=G17-XD11,,,,&P_FILTER0=&P_FILTER2=&P_MA_DOI_TUONG=">Hoạt
+                      động xây dựng</a>
+                  </div>
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/congdan/an_toan_lao_dong.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G07-LD01&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=1&page=1&P_FILTER1=G07-LD01,,,,&P_FILTER0=&P_FILTER2=&P_MA_DOI_TUONG=">An
+                      toàn lao động</a>
+                  </div>
+                </div>
+                <div class="col-sm-6" style="padding: 5px 4%;">
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/congdan/ql_dat.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G13-TN02&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G13-TN02,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Quản
+                      lý đất đai</a>
+                  </div>
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/congdan/duong_bo.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G04-GT02&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G04-GT02,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Đường
+                      bộ</a>
+                  </div>
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/congdan/nguoi_co_cong.png"
+                      style="margin-left: 1.5%;padding-right: 2%;">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G07-LD09&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G07-LD09,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Người
+                      có công</a>
+                  </div>
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/congdan/y_te.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=000_00_19_H26&tab=2&page=1&P_FILTER2=,,000_00_19_H26,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Y
+                      tế</a>
+                  </div>
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/congdan/giao_duc_dao_tao.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=000_00_04_H26&tab=2&page=1&P_FILTER2=,,000_00_04_H26,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Giáo
+                      dục và đào tạo</a>
+                  </div>
+                </div>
+              </div>
 
-          </div>
+              <div id="doanhNghiep" class="col-sm-12 tabcontent" style="padding: 0 0;">
+                <div class="col-sm-6" style="padding: 5px 4%;">
+                  <div class="box-search box-search-min">
+                    <form class="example" style="padding: 0px 2%; width: 92%">
+                      <input type="text" placeholder="Nhập từ khóa tìm kiếm..." id="tuKhoa2">
+                      <button id="home-search" class="btn-max">Tìm kiếm nâng cao <i class="fa fa-search"></i></button>
+                      <span id="home-search1" onclick="searchtt2()" class="btn-min"><i class="fa fa-search"></i></span>
+                    </form>
+                  </div>
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/doanhnghiep/linh_vuc_dau_tu.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G05-KD07&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G05-KD07,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Khởi
+                      sự kinh doanh</a>
+                  </div>
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/doanhnghiep/an_toan_lao_dong.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G07-LD01&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=1&page=1&P_FILTER1=G07-LD01,,,,&P_FILTER0=&P_FILTER2=&P_MA_DOI_TUONG=">An
+                      toàn lao động</a>
+                  </div>
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/doanhnghiep/dv_thuong_mai.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G02-CT07&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G02-CT07,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Dịch
+                      vụ thương mại</a>
+                  </div>
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/doanhnghiep/cong_thuong.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=000_00_02_H26&tab=2&page=1&P_FILTER2=,,000_00_02_H26,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Công
+                      thương</a>
+                  </div>
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/doanhnghiep/ql_dau_tu_xay_dung.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G17-XD15&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G17-XD15,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Xây
+                      dựng</a>
+                  </div>
 
-          <div class="clearfix"></div>
-          <div id="dvctthome" class="dvctthome">
+                </div>
+                <div class="col-sm-6" style="padding: 5px 4%;">
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/doanhnghiep/xuc_tien_thuong_mai.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G02-CT23&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G02-CT23,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Xúc
+                      tiến thương mại</a>
+                  </div>
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/doanhnghiep/so_huu_tri_tue.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G06-KC03&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G06-KC03,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Sở
+                      hữu trí tuệ</a>
+                  </div>
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/doanhnghiep/xuat_ban.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G14-TT11&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G14-TT11,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Xuất
+                      bản</a>
+                  </div>
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/doanhnghiep/buu_chinh.png">
+                    <a
+                      href="hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G14-TT03&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G14-TT03,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Bưu
+                      chính</a>
+                  </div>
+                  <div class="item">
+                    <img src="/apps/hanoi/modules/resource/images/doanhnghiep/ha_tang_do_thi.png">
+                    <a
+                      href="/hanoi/tiep-nhan-online/chonThuTucNopHoSo?P_MA_LINH_VUC=G13-TN09&P_MA_MUC_DO=&P_TEN_THU_TUC=&P_QUAN_HUYEN=&tab=2&page=1&P_FILTER2=G13-TN09,,,,&P_FILTER0=&P_FILTER1=&P_MA_DOI_TUONG=">Môi
+                      trường</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="clearfix"></div>
+            <div id="dvctthome" class="dvctthome">
               <div class="contentDVC-title clearfix">
-                  <div class="col-sm-12 col-xs-12 dvctthome-title" style="">
-                      <div class="col-sm-6" style="padding: 0 0;">
-                          <div class="tab">
-                              <button class="tablinksDVC active tablinks-text"><span class="">DỊCH VỤ CÔNG TRỰC TUYẾN</span></button>
-                          </div>
-                      </div>
-                      <div class="col-sm-12 linengang" style="border-bottom: 6px solid #E28217; position: relative; margin-top: -1px" > </div>
+                <div class="col-sm-12 col-xs-12 dvctthome-title" style="">
+                  <div class="col-sm-6" style="padding: 0 0;">
+                    <div class="tab">
+                      <button class="tablinksDVC active tablinks-text"><span class="">DỊCH VỤ CÔNG TRỰC
+                          TUYẾN</span></button>
+                    </div>
                   </div>
+                  <div class="col-sm-12 linengang"
+                    style="border-bottom: 6px solid #E28217; position: relative; margin-top: -1px"> </div>
+                </div>
               </div>
               <div class="dvctthome-showtt clearfix">
-                  <div class="col-sm-12" style="padding: 0">
-                                                          <div class="col-sm-6" style="padding: 5px 4%;">
-                                                                          <div class="item">
-                                      <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
-                                      <a class="" title="Đăng ký khai sinh"
-                                         href="/dich-vu-cong/tiep-nhan-online/chon-truong-hop-ho-so?ma-thu-tuc-public=28400"
-                                      >Đăng ký khai sinh</a>
-                                  </div>
-                                                                                                                      <div class="item">
-                                      <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
-                                      <a class="" title="Cấp giấy xác nhận tình trạng hôn nhân"
-                                         href="/dich-vu-cong/tiep-nhan-online/chon-truong-hop-ho-so?ma-thu-tuc-public=29757"
-                                      >Cấp giấy xác nhận tình trạng hôn nhân</a>
-                                  </div>
-                                                                                                                      <div class="item">
-                                      <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
-                                      <a class="" title="Cấp bản sao trích lục hộ tịch cấp Quận/Huyện"
-                                         href="/dich-vu-cong/tiep-nhan-online/chon-truong-hop-ho-so?ma-thu-tuc-public=28935"
-                                      >Cấp bản sao trích lục hộ tịch cấp Quận/Huyện</a>
-                                  </div>
-                                                                                                                      <div class="item">
-                                      <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
-                                      <a class="" title="Đăng ký kết hôn"
-                                         href="/dich-vu-cong/tiep-nhan-online/chon-truong-hop-ho-so?ma-thu-tuc-public=30326"
-                                      >Đăng ký kết hôn</a>
-                                  </div>
-                                                                                                              </div>
-                                                          <div class="col-sm-6" style="padding: 5px 4%;">
-                                                                          <div class="item">
-                                      <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
-                                      <a class="" title="Thông báo hoạt động khuyến mại"
-                                         href="/dich-vu-cong/tiep-nhan-online/chon-truong-hop-ho-so?ma-thu-tuc-public=28507"
-                                      >Thông báo hoạt động khuyến mại</a>
-                                  </div>
-                                                                                                                      <div class="item">
-                                      <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
-                                      <a class="" title="Cấp bản sao trích lục hộ tịch cấp Phường/xã"
-                                         href="/dich-vu-cong/tiep-nhan-online/chon-truong-hop-ho-so?ma-thu-tuc-public=45393"
-                                      >Cấp bản sao trích lục hộ tịch cấp Phường/xã</a>
-                                  </div>
-                                                                                                                      <div class="item">
-                                      <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
-                                      <a class="" title="Cấp bản sao văn bằng, chứng chỉ từ sổ gốc cấp THPT"
-                                         href="/dich-vu-cong/tiep-nhan-online/chon-truong-hop-ho-so?ma-thu-tuc-public=28512"
-                                      >Cấp bản sao văn bằng, chứng chỉ từ sổ gốc cấp THPT</a>
-                                  </div>
-                                                                                                                      <div class="item">
-                                      <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
-                                      <a class="" title="Đăng ký lại kết hôn"
-                                         href="/dich-vu-cong/tiep-nhan-online/chon-truong-hop-ho-so?ma-thu-tuc-public=29848"
-                                      >Đăng ký lại kết hôn</a>
-                                  </div>
-                                                                                                              </div>
-                                                  </div>
-              </div>
-              
-          </div>
-          <div class="contentTKTT" style="padding: 0 0;">
-
-              <div class="col-sm-12 col-xs-12" style="padding: 0 0;background: rgba(255, 255, 255, 0.2);height: 50px; border-radius: 8px 8px 0px 0px;" >
-                  
-                  <div class="col-sm-6" style="padding: 0 0;">
-                      <div class="tab">
-                          <button class="tablinksTKTT active" onclick="openTabTKTT(event, 'kqxlhs')">KẾT QUẢ XỬ LÝ HỒ SƠ</button>
-                          <button class="tablinksTKTT" onclick="openTabTKTT(event, 'traCuu')">TRA CỨU HỒ SƠ <span id="tabTCHS">TRỰC TUYẾN</span></button>
-                      </div>
+                <div class="col-sm-12" style="padding: 0">
+                  <div class="col-sm-6" style="padding: 5px 4%;">
+                    <div class="item">
+                      <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
+                      <a 
+                        title="Đăng ký khai sinh"
+                        href="javascript:void(0);"
+                        class="show-zone-city"
+                      >
+                        Đăng ký khai sinh
+                      </a>
+                    </div>
+                    <div class="item">
+                      <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
+                      <a title="Cấp giấy xác nhận tình trạng hôn nhân"
+                      href="javascript:void(0);"
+                      class="show-zone-city">Cấp giấy xác
+                        nhận tình trạng hôn nhân</a>
+                    </div>
+                    <div class="item">
+                      <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
+                      <a title="Cấp bản sao trích lục hộ tịch cấp Quận/Huyện"
+                      href="javascript:void(0);"
+                      class="show-zone-city">Cấp bản sao
+                        trích lục hộ tịch cấp Quận/Huyện</a>
+                    </div>
+                    <div class="item">
+                      <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
+                      <a title="Đăng ký kết hôn"
+                      href="javascript:void(0);"
+                      class="show-zone-city">Đăng ký kết
+                        hôn</a>
+                    </div>
                   </div>
-              </div>
-              <div class="col-sm-12 linengang" style="border-bottom: 6px solid #E28217; position: relative; margin-top: -1px" > </div>
-
-              <div id="kqxlhs"  class="col-sm-12 tabcontentTKTT" style="padding: 0 0;display: block;height: 230px;margin-bottom: 10px;border-radius: 0px 0px 8px 8px;box-shadow: 0px 2px 4px rgb(0 0 0 / 14%);"> 
-               <form name="frmMain" method="post" id="frmMain" action="" enctype="multipart/form-data">
-                  <div class="col-sm-6 col-xs-12 thongkehs" style="padding: 20px 4%; background: white;margin-top: 15px;">
-                      <div class="col-sm-12" style="padding: 0px 0%; background: white">
-                          <div class="col-xs-4 imgTK" style="padding: 0px 0px; background: white;margin-top: 20px;">
-                              <!-- <img style="height: 133px" src="/apps/hanoi/modules/resource/images/document.png"> -->
-                              <img style="" src="/apps/hanoi/modules/resource/images/document.png">
-                          </div>
-                          <div class="col-xs-8 so-ho-so" style="">
-                              <p style="background: #F5F5F5;height: 28px;margin-top: -5px;padding: 5px;">
-                                  TỔNG SỐ HỒ SƠ TIẾP NHẬN</p>
-                              <h3>1.631.280</h3>
-                              <p style="color:#808080">Hồ sơ</p>
-                          </div>
-                      </div>
+                  <div class="col-sm-6" style="padding: 5px 4%;">
+                    <div class="item">
+                      <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
+                      <a title="Thông báo hoạt động khuyến mại"
+                        href="javascript:void(0);"
+                        class="show-zone-city">Thông báo
+                        hoạt động khuyến mại</a>
+                    </div>
+                    <div class="item">
+                      <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
+                      <a title="Cấp bản sao trích lục hộ tịch cấp Phường/xã"
+                        href="javascript:void(0);"
+                        class="show-zone-city">Cấp bản sao
+                        trích lục hộ tịch cấp Phường/xã</a>
+                    </div>
+                    <div class="item">
+                      <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
+                      <a title="Cấp bản sao văn bằng, chứng chỉ từ sổ gốc cấp THPT"
+                        href="javascript:void(0);"
+                        class="show-zone-city">Cấp bản sao
+                        văn bằng, chứng chỉ từ sổ gốc cấp THPT</a>
+                    </div>
+                    <div class="item">
+                      <img src="/apps/hanoi/modules/resource/images/congdan/ho_tich.png">
+                      <a title="Đăng ký lại kết hôn"
+                        href="javascript:void(0);"
+                        class="show-zone-city">Đăng ký lại
+                        kết hôn</a>
+                    </div>
                   </div>
-                  <div class="col-sm-6 col-xs-12 bieudo" style="padding: 20px 4%; background: white;margin-left:-45px;margin-top: 2%;">
-                      <div class="col-xs-12" style="padding: 0px 0%; background: white">
-                          <div style="margin-top: -15px;display:none"><span style="font-size:25px">1.480.571</span> <span style="color:#808080">Hồ sơ</span> </div>
-                          <span style="font-size:20px;color:#219635;">90.8%</span>
-                          <div>
-                              <svg height="15" width="100" style="margin-left: 40px;">
-                              <line x1="0" y1="0" x2="300" y2="300" style="stroke:rgb(66,133,244);stroke-width:2" />
-                              </svg>
-                          </div>
-                          <div class="percent" style="height: 110px;">
-                              <div
-                                  id="chart-percent"
-                                  class="circliful circle-info-half"
-                                  data-dimension="300"
-                                  data-text="Hồ sơ đã giải quyết"
-                                      
-                                  data-info="1.480.571"
-                                  data-width="25"
-                                  data-fontsize="15"
-                                  data-percent="90.8"
-                                  data-fgcolor="#219635"
-                                  data-bgcolor="#BDE0CC"
-                                  data-type="half"
-                                  style="width: 160px;margin-left: -10px;margin-top: -50px;">
+                </div>
+
+                <div class="col">
+                  <div class="row">
+                    <div class="col-12 mt-4" style="margin: 1.5%;">
+                      <div id="zone-city" class="is-hidden">
+                        <h3><b>Danh sách thành phố</b></h3>
+                        <div class="row">
+                          <div class="col-2">
+                            <div class="card cursor-pointer item-city">
+                              <div class="card-body">
+                                <span class="name-city">Hà Nội</span>
                               </div>
+                            </div>
                           </div>
-                          <div class="titlecss" style="margin-left: 300px;margin-top: -15px;">
-                              <div class="divdot"><span class="dot1"></span> <span class="titledot">Hồ sơ giải quyết đúng hạn</span></div>
-                              <br>
-                              <div class="divdot"><span class="dot2"></span> <span class="titledot">Hồ sơ đã giải quyết</span></div>
+
+                          <div class="col-2">
+                            <div class="card cursor-pointer item-city">
+                              <div class="card-body">
+                                <span class="name-city">Huế</span>
+                              </div>
+                            </div>
                           </div>
-                          <div class="input-group datecss">
-<!--                                        <input class="form-control"  placeholder="yyyy" type="text" value="2023" onkeypress="txt_SEARCH_onkeypress(event);" id="code_ngaysinh" name="code_ngaysinh">-->
-                              <select id="namthongke" name="namthongke" class="namthongke" onchange="changeyear();">
-                                                                                  <option value="2016"  >2016</option>
-                                                                                  <option value="2017"  >2017</option>
-                                                                                  <option value="2018"  >2018</option>
-                                                                                  <option value="2019"  >2019</option>
-                                                                                  <option value="2020"  >2020</option>
-                                                                                  <option value="2021"  >2021</option>
-                                                                                  <option value="2022"  >2022</option>
-                                                                                  <option value="2023" selected >2023</option>
-                                                                          </select>
-                              <div class="input-group-addon" onclick="clickDate()"><i class="fa fa-calendar"></i></div>
+
+                          <div class="col-2">
+                            <div class="card cursor-pointer item-city">
+                              <div class="card-body">
+                                <span class="name-city">Đà Nẵng</span>
+                              </div>
+                            </div>
                           </div>
+
+                          <div class="col-2">
+                            <div class="card cursor-pointer item-city">
+                              <div class="card-body">
+                                <span class="name-city">Cần Thơ</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-2">
+                            <div class="card cursor-pointer item-city">
+                              <div class="card-body">
+                                <span class="name-city">TP. Hồ Chí Minh</span>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
                       </div>
+                    </div>
                   </div>
-                  
+                </div>
+
+                <div class="col" style="margin: 1.5%;">
+                  <div class="row">
+                    <div class="col-12 mt-2">
+                      <div id="zone-chart" class="is-hidden">
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="card-title">
+                                  <h4><b>Năm 2022</b></h4>
+                                </div>
+
+                                <div class="row">
+                                  <div class="col-6">
+                                    <div class="chart-fake">
+                                      <div class="chart-fake-value">100% đúng hạn</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-6">
+                                    <p style="font-size: 18px;">Tổng HS nộp: 5.486.427</p>
+                                    <p style="font-size: 16px;">Giải quyết: 5.303.821 hồ sơ</p>
+                                    <p style="font-size: 16px;">Đúng hạn: 5.303.821 hồ sơ</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="card-title">
+                                  <h4><b>Tình hình</b></h4>
+
+
+                                  <div class="zone-data-month">
+                                    <div class="row">
+                                      <div class="col-4">
+                                        <div class="card">
+                                          <div class="card-body">
+                                            <div class="item-month">
+                                              <p style="font-size: 15px; color: #e28217;">
+                                                Tháng 1
+                                              </p>
+      
+                                              <p class="mt-4" style="font-size: 14px;">
+                                                Text
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-4">
+                                        <div class="card">
+                                          <div class="card-body">
+                                            <div class="item-month">
+                                              <p style="font-size: 15px; color: #e28217;">
+                                                Tháng 2
+                                              </p>
+      
+                                              <p class="mt-4" style="font-size: 14px;">
+                                                Text
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-4">
+                                        <div class="card">
+                                          <div class="card-body">
+                                            <div class="item-month">
+                                              <p style="font-size: 15px; color: #e28217;">
+                                                Tháng 3
+                                              </p>
+      
+                                              <p class="mt-4" style="font-size: 14px;">
+                                                Text
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-4 mt-2">
+                                        <div class="card">
+                                          <div class="card-body">
+                                            <div class="item-month">
+                                              <p style="font-size: 15px; color: #e28217;">
+                                                Tháng 4
+                                              </p>
+      
+                                              <p class="mt-4" style="font-size: 14px;">
+                                                Text
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-4 mt-2">
+                                        <div class="card">
+                                          <div class="card-body">
+                                            <div class="item-month">
+                                              <p style="font-size: 15px; color: #e28217;">
+                                                Tháng 5
+                                              </p>
+      
+                                              <p class="mt-4" style="font-size: 14px;">
+                                                Text
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-4 mt-2">
+                                        <div class="card">
+                                          <div class="card-body">
+                                            <div class="item-month">
+                                              <p style="font-size: 15px; color: #e28217;">
+                                                Tháng 6
+                                              </p>
+      
+                                              <p class="mt-4" style="font-size: 14px;">
+                                                Text
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-4 mt-2">
+                                        <div class="card">
+                                          <div class="card-body">
+                                            <div class="item-month">
+                                              <p style="font-size: 15px; color: #e28217;">
+                                                Tháng 7
+                                              </p>
+      
+                                              <p class="mt-4" style="font-size: 14px;">
+                                                Text
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-4 mt-2">
+                                        <div class="card">
+                                          <div class="card-body">
+                                            <div class="item-month">
+                                              <p style="font-size: 15px; color: #e28217;">
+                                                Tháng 8
+                                              </p>
+      
+                                              <p class="mt-4" style="font-size: 14px;">
+                                                Text
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-4 mt-2">
+                                        <div class="card">
+                                          <div class="card-body">
+                                            <div class="item-month">
+                                              <p style="font-size: 15px; color: #e28217;">
+                                                Tháng 9
+                                              </p>
+      
+                                              <p class="mt-4" style="font-size: 14px;">
+                                                Text
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-4 mt-2">
+                                        <div class="card">
+                                          <div class="card-body">
+                                            <div class="item-month">
+                                              <p style="font-size: 15px; color: #e28217;">
+                                                Tháng 10
+                                              </p>
+      
+                                              <p class="mt-4" style="font-size: 14px;">
+                                                Text
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-4 mt-2">
+                                        <div class="card">
+                                          <div class="card-body">
+                                            <div class="item-month">
+                                              <p style="font-size: 15px; color: #e28217;">
+                                                Tháng 11
+                                              </p>
+      
+                                              <p class="mt-4" style="font-size: 14px;">
+                                                Text
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-4 mt-2">
+                                        <div class="card">
+                                          <div class="card-body">
+                                            <div class="item-month">
+                                              <p style="font-size: 15px; color: #e28217;">
+                                                Tháng 12
+                                              </p>
+      
+                                              <p class="mt-4" style="font-size: 14px;">
+                                                Text
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                    </div>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="contentTKTT" style="padding: 0 0;">
+
+              <div class="col-sm-12 col-xs-12"
+                style="padding: 0 0;background: rgba(255, 255, 255, 0.2);height: 50px; border-radius: 8px 8px 0px 0px;">
+
+                <div class="col-sm-6" style="padding: 0 0;">
+                  <div class="tab">
+                    <button class="tablinksTKTT active" onclick="openTabTKTT(event, 'kqxlhs')">KẾT QUẢ XỬ LÝ HỒ
+                      SƠ</button>
+                    <button class="tablinksTKTT" onclick="openTabTKTT(event, 'traCuu')">TRA CỨU HỒ SƠ <span
+                        id="tabTCHS">TRỰC TUYẾN</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 linengang"
+                style="border-bottom: 6px solid #E28217; position: relative; margin-top: -1px"> </div>
+
+              <div id="kqxlhs" class="col-sm-12 tabcontentTKTT"
+                style="padding: 0 0;display: block;height: 230px;margin-bottom: 10px;border-radius: 0px 0px 8px 8px;box-shadow: 0px 2px 4px rgb(0 0 0 / 14%);">
+                <form name="frmMain" method="post" id="frmMain" action="" enctype="multipart/form-data">
+                  <div class="col-sm-6 col-xs-12 thongkehs"
+                    style="padding: 20px 4%; background: white;margin-top: 15px;">
+                    <div class="col-sm-12" style="padding: 0px 0%; background: white">
+                      <div class="col-xs-4 imgTK" style="padding: 0px 0px; background: white;margin-top: 20px;">
+                        <!-- <img style="height: 133px" src="/apps/hanoi/modules/resource/images/document.png"> -->
+                        <img style="" src="/apps/hanoi/modules/resource/images/document.png">
+                      </div>
+                      <div class="col-xs-8 so-ho-so" style="">
+                        <p style="background: #F5F5F5;height: 28px;margin-top: -5px;padding: 5px;">
+                          TỔNG SỐ HỒ SƠ TIẾP NHẬN</p>
+                        <h3>1.631.280</h3>
+                        <p style="color:#808080">Hồ sơ</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xs-12 bieudo"
+                    style="padding: 20px 4%; background: white;margin-left:-45px;margin-top: 2%;">
+                    <div class="col-xs-12" style="padding: 0px 0%; background: white">
+                      <div style="margin-top: -15px;display:none"><span style="font-size:25px">1.480.571</span> <span
+                          style="color:#808080">Hồ sơ</span> </div>
+                      <span style="font-size:20px;color:#219635;">90.8%</span>
+                      <div>
+                        <svg height="15" width="100" style="margin-left: 40px;">
+                          <line x1="0" y1="0" x2="300" y2="300" style="stroke:rgb(66,133,244);stroke-width:2" />
+                        </svg>
+                      </div>
+                      <div class="percent" style="height: 110px;">
+                        <div id="chart-percent" class="circliful circle-info-half" data-dimension="300"
+                          data-text="Hồ sơ đã giải quyết" data-info="1.480.571" data-width="25" data-fontsize="15"
+                          data-percent="90.8" data-fgcolor="#219635" data-bgcolor="#BDE0CC" data-type="half"
+                          style="width: 160px;margin-left: -10px;margin-top: -50px;">
+                        </div>
+                      </div>
+                      <div class="titlecss" style="margin-left: 300px;margin-top: -15px;">
+                        <div class="divdot"><span class="dot1"></span> <span class="titledot">Hồ sơ giải quyết đúng
+                            hạn</span></div>
+                        <br>
+                        <div class="divdot"><span class="dot2"></span> <span class="titledot">Hồ sơ đã giải quyết</span>
+                        </div>
+                      </div>
+                      <div class="input-group datecss">
+                        <!--                                        <input class="form-control"  placeholder="yyyy" type="text" value="2023" onkeypress="txt_SEARCH_onkeypress(event);" id="code_ngaysinh" name="code_ngaysinh">-->
+                        <select id="namthongke" name="namthongke" class="namthongke" onchange="changeyear();">
+                          <option value="2016">2016</option>
+                          <option value="2017">2017</option>
+                          <option value="2018">2018</option>
+                          <option value="2019">2019</option>
+                          <option value="2020">2020</option>
+                          <option value="2021">2021</option>
+                          <option value="2022">2022</option>
+                          <option value="2023" selected>2023</option>
+                        </select>
+                        <div class="input-group-addon" onclick="clickDate()"><i class="fa fa-calendar"></i></div>
+                      </div>
+                    </div>
+                  </div>
+
                 </form>
               </div>
-              
-              <div id="traCuu"  class="col-sm-12 tabcontentTKTT" style="padding: 0 0;height: 230px;margin-bottom: 10px;;border-radius: 0px 0px 8px 8px;box-shadow: 0px 2px 4px rgb(0 0 0 / 14%);"> 
-                  <div class="col-sm-3 col-xs-12" style="padding: 20px 4%; background: white;margin-top: 15px;">
-                      <div class="col-sm-12 col-xs-12" style="padding: 0px 0%; background: white">
-                          <div class="col-xs-12 traCuuicon" style="padding: 0px 0px; background: white;margin-top: 20px;margin-left: 30px;">
-                              <!-- <img style="height: 133px" src="/apps/hanoi/modules/resource/images/document.png"> -->
-                              <img style="" src="/apps/hanoi/modules/resource/images/document_writing.png">
-                          </div>
-                      </div>
+
+              <div id="traCuu" class="col-sm-12 tabcontentTKTT"
+                style="padding: 0 0;height: 230px;margin-bottom: 10px;;border-radius: 0px 0px 8px 8px;box-shadow: 0px 2px 4px rgb(0 0 0 / 14%);">
+                <div class="col-sm-3 col-xs-12" style="padding: 20px 4%; background: white;margin-top: 15px;">
+                  <div class="col-sm-12 col-xs-12" style="padding: 0px 0%; background: white">
+                    <div class="col-xs-12 traCuuicon"
+                      style="padding: 0px 0px; background: white;margin-top: 20px;margin-left: 30px;">
+                      <!-- <img style="height: 133px" src="/apps/hanoi/modules/resource/images/document.png"> -->
+                      <img style="" src="/apps/hanoi/modules/resource/images/document_writing.png">
+                    </div>
                   </div>
-                  <div class="col-sm-9 col-xs-12 traCuufilter" style="padding: 20px 4%; background: white;margin-left: -90px;margin-top: 10px;">
-                      <div class="row">
-                          <div class="col-sm-4 col-xs-12 txtfilter" style="padding: 0px 0%; background: white">
-                              <label for="txt_MA_HO_SO">Mã hồ sơ</label>
-                              <input type="text" class="form-control inputtext" id="txt_MA_HO_SO" name="txt_MA_HO_SO" placeholder="Nhập mã hồ sơ">
-                          </div>
-                          <div class="col-sm-4 col-xs-12 txtfilter" style="padding: 0px 0%; background: white">
-                              <label for="txt_CMND">Số CMND người nộp</label>
-                              <input type="text" class="form-control inputtext" id="txt_CMND" name="txt_CMND" placeholder="Nhập số CMND người nộp">
-                          </div>
-                          <div class="col-sm-4 col-xs-12 txtfilter" style="padding: 0px 0%; background: white">
-                              <label for="txt_TEN_NGUOI_NOP">Tên tổ chức, cá nhân nộp</label>
-                              <input type="text" class="form-control inputtext" id="txt_TEN_NGUOI_NOP" name="txt_TEN_NGUOI_NOP" placeholder="Nhập tên người nộp">
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-sm-10 col-xs-12 txtfilter" style="padding: 0px 0%; background: white; margin-top: 15px;">
-                              Tra cứu hồ sơ bằng tin nhắn SMS <br>
-                              <span style='color:orange;'> TTHC < Khoảng cách > < Số hồ sơ > gửi 8188</span>
-                          </div>
-                          <div class="col-sm-2 col-xs-12 txtfilter btntracuucss" style="padding: 0px 0%; background: white; margin-top: 15px;">
-                              <span type="button" id="btn-tracuu" onclick="tracuuTTHC();" class="btn btn-warning" style="width: 85%;height: 45px;font-size: 17px;padding-top: 10px;">
-                                  Tra cứu
-                              </span>
-                          </div>
-                      </div> 
-                      <div class="row">
-                          
-                      </div>
+                </div>
+                <div class="col-sm-9 col-xs-12 traCuufilter"
+                  style="padding: 20px 4%; background: white;margin-left: -90px;margin-top: 10px;">
+                  <div class="row">
+                    <div class="col-sm-4 col-xs-12 txtfilter" style="padding: 0px 0%; background: white">
+                      <label for="txt_MA_HO_SO">Mã hồ sơ</label>
+                      <input type="text" class="form-control inputtext" id="txt_MA_HO_SO" name="txt_MA_HO_SO"
+                        placeholder="Nhập mã hồ sơ">
+                    </div>
+                    <div class="col-sm-4 col-xs-12 txtfilter" style="padding: 0px 0%; background: white">
+                      <label for="txt_CMND">Số CMND người nộp</label>
+                      <input type="text" class="form-control inputtext" id="txt_CMND" name="txt_CMND"
+                        placeholder="Nhập số CMND người nộp">
+                    </div>
+                    <div class="col-sm-4 col-xs-12 txtfilter" style="padding: 0px 0%; background: white">
+                      <label for="txt_TEN_NGUOI_NOP">Tên tổ chức, cá nhân nộp</label>
+                      <input type="text" class="form-control inputtext" id="txt_TEN_NGUOI_NOP" name="txt_TEN_NGUOI_NOP"
+                        placeholder="Nhập tên người nộp">
+                    </div>
                   </div>
+                  <div class="row">
+                    <div class="col-sm-10 col-xs-12 txtfilter"
+                      style="padding: 0px 0%; background: white; margin-top: 15px;">
+                      Tra cứu hồ sơ bằng tin nhắn SMS <br>
+                      <span style='color:orange;'> TTHC < Khoảng cách>
+                          < Số hồ sơ> gửi 8188</span>
+                    </div>
+                    <div class="col-sm-2 col-xs-12 txtfilter btntracuucss"
+                      style="padding: 0px 0%; background: white; margin-top: 15px;">
+                      <span type="button" id="btn-tracuu" onclick="tracuuTTHC();" class="btn btn-warning"
+                        style="width: 85%;height: 45px;font-size: 17px;padding-top: 10px;">
+                        Tra cứu
+                      </span>
+                    </div>
+                  </div>
+                  <div class="row">
+
+                  </div>
+                </div>
               </div>
               <div class="col-xs-12" style="padding: 0px 0%; background: white;">
-                              <div id="result"></div>
-                          </div>
-              
+                <div id="result"></div>
+              </div>
+
+            </div>
+
           </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function openTab(evt, name) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(name).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
 
-  </div>
-</div>
-</div>
-</div>
-<script type="text/javascript">
-function openTab(evt, name) {
-var i, tabcontent, tablinks;
-tabcontent = document.getElementsByClassName("tabcontent");
-for (i = 0; i < tabcontent.length; i++) {
-  tabcontent[i].style.display = "none";
-}
-tablinks = document.getElementsByClassName("tablinks");
-for (i = 0; i < tablinks.length; i++) {
-  tablinks[i].className = tablinks[i].className.replace(" active", "");
-}
-document.getElementById(name).style.display = "block";
-evt.currentTarget.className += " active";
-}
+      function openTabTKTT(evt, name) {
+        var i, tabcontentTKTT, tablinksTKTT;
+        tabcontentTKTT = document.getElementsByClassName("tabcontentTKTT");
+        for (i = 0; i < tabcontentTKTT.length; i++) {
+          tabcontentTKTT[i].style.display = "none";
+        }
+        tablinksTKTT = document.getElementsByClassName("tablinksTKTT");
+        for (i = 0; i < tablinksTKTT.length; i++) {
+          tablinksTKTT[i].className = tablinksTKTT[i].className.replace(" active", "");
+        }
+        document.getElementById(name).style.display = "block";
+        evt.currentTarget.className += " active";
+        document.getElementById('result').style.display = "none";
+      }
 
-function openTabTKTT(evt, name) {
-var i, tabcontentTKTT, tablinksTKTT;
-tabcontentTKTT = document.getElementsByClassName("tabcontentTKTT");
-for (i = 0; i < tabcontentTKTT.length; i++) {
-  tabcontentTKTT[i].style.display = "none";
-}
-tablinksTKTT = document.getElementsByClassName("tablinksTKTT");
-for (i = 0; i < tablinksTKTT.length; i++) {
-  tablinksTKTT[i].className = tablinksTKTT[i].className.replace(" active", "");
-}
-document.getElementById(name).style.display = "block";
-evt.currentTarget.className += " active";
-document.getElementById('result').style.display = "none";
-}
-
-$(document).ready(function() {
-$("#home-search").click(function(event) {
-  event.preventDefault();
-  var keyword = $("#tuKhoa").val().trim();
-  if (keyword === '') {
-      return;
-  }
-  var url = "/" + "dichvucong/tiepnhanonline?ten-thu-tuc=" + keyword + "&ma-co-quan=&ma-linh-vuc=&ma-muc-do=&ma-cap-thu-tuc=";
-  window.location.replace(url);
-});
-$("#tuKhoa").on('keypress',function(e) {
-  if(e.which === 13) {
-      $("#home-search").click();
-  }
-});
-});
-require([
-'jquery'
-,'slick'
-,'jquery_video'
-,'circliful'
-,'highchart']
-,function(){
-  $(window).ready(function() {
-      $("#chart-percent").circliful();
-  });
-});
-
-function tracuuTTHC(){
-var mahoso = $('#txt_MA_HO_SO').val();
-var socmnd = $('#txt_CMND').val();
-var tenng = $('#txt_TEN_NGUOI_NOP').val();
-if(mahoso == '' && socmnd == '' && tenng == ''){
-  alert('Vui lòng nhập các thông tin tra cứu !');
-}else{
-  $.ajax({
-              type: 'POST',
-              url: '/' + 'dichvucong/tracuu/selecttracuu',
-              data: {
-                  mhs: mahoso,
-                  cmnd: socmnd,
-                  tencd: tenng
-              },
-              success: function (r)
-              {
-                  document.getElementById('result').style.display = "block";
-                  $('#result').html('');
-                  $('#result').html(r);
-              }
+      $(document).ready(function () {
+        $("#home-search").click(function (event) {
+          event.preventDefault();
+          var keyword = $("#tuKhoa").val().trim();
+          if (keyword === '') {
+            return;
+          }
+          var url = "/" + "dichvucong/tiepnhanonline?ten-thu-tuc=" + keyword + "&ma-co-quan=&ma-linh-vuc=&ma-muc-do=&ma-cap-thu-tuc=";
+          window.location.replace(url);
+        });
+        $("#tuKhoa").on('keypress', function (e) {
+          if (e.which === 13) {
+            $("#home-search").click();
+          }
+        });
+      });
+      require([
+        'jquery'
+        , 'slick'
+        , 'jquery_video'
+        , 'circliful'
+        , 'highchart']
+        , function () {
+          $(window).ready(function () {
+            $("#chart-percent").circliful();
           });
-}
-}
+        });
 
-function showPopWin(url, w, h, title) {
-// Fixes dual-screen position Most browsers Firefox
-var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
-var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
-width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
-height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+      function tracuuTTHC() {
+        var mahoso = $('#txt_MA_HO_SO').val();
+        var socmnd = $('#txt_CMND').val();
+        var tenng = $('#txt_TEN_NGUOI_NOP').val();
+        if (mahoso == '' && socmnd == '' && tenng == '') {
+          alert('Vui lòng nhập các thông tin tra cứu !');
+        } else {
+          $.ajax({
+            type: 'POST',
+            url: '/' + 'dichvucong/tracuu/selecttracuu',
+            data: {
+              mhs: mahoso,
+              cmnd: socmnd,
+              tencd: tenng
+            },
+            success: function (r) {
+              document.getElementById('result').style.display = "block";
+              $('#result').html('');
+              $('#result').html(r);
+            }
+          });
+        }
+      }
 
-var left = ((width / 2) - (w / 2)) + dualScreenLeft;
-var top = ((height / 2) - (h / 2)) + dualScreenTop;
-var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+      function showPopWin(url, w, h, title) {
+        // Fixes dual-screen position Most browsers Firefox
+        var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+        var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+        width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+        height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
 
-// Puts focus on the newWindow
-if (window.focus) {
-newWindow.focus();
-}
-}
+        var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+        var top = ((height / 2) - (h / 2)) + dualScreenTop;
+        var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
 
-function hien_thi_quy_trinh(so_ho_so) {
-var url = SITE_ROOT + 'dich-vu-cong/tra-cuu/quy_trinh_ho_so?sohoso=' + so_ho_so;
-showPopWin(url, 800, 400, null);
-}
+        // Puts focus on the newWindow
+        if (window.focus) {
+          newWindow.focus();
+        }
+      }
 
-function changeyear(){
-m = SITE_ROOT + 'hanoi/index?namtk=' + $('#namthongke').val();
-$("#frmMain").attr("action", m);
-$("#frmMain").submit();
-}
-function searchtt1(){
-//alert('vào k');
-var keyword = document.getElementById("tuKhoa1").value;
+      function hien_thi_quy_trinh(so_ho_so) {
+        var url = SITE_ROOT + 'dich-vu-cong/tra-cuu/quy_trinh_ho_so?sohoso=' + so_ho_so;
+        showPopWin(url, 800, 400, null);
+      }
 
-  if (keyword === '') {
-      alert('Chưa nhập từ khóa tìm kiếm');
-      return;
-  }
-  var url = "/" + "dichvucong/tiepnhanonline?ten-thu-tuc=" + keyword + "&ma-co-quan=&ma-linh-vuc=&ma-muc-do=&ma-cap-thu-tuc=";
-  window.location.replace(url);
-}
-function searchtt2(){
-//alert('vào k');
-var keyword = document.getElementById("tuKhoa2").value;
+      function changeyear() {
+        m = SITE_ROOT + 'hanoi/index?namtk=' + $('#namthongke').val();
+        $("#frmMain").attr("action", m);
+        $("#frmMain").submit();
+      }
+      function searchtt1() {
+        //alert('vào k');
+        var keyword = document.getElementById("tuKhoa1").value;
 
-  if (keyword === '') {
-      alert('Chưa nhập từ khóa tìm kiếm');
-      return;
-  }
-  var url = "/" + "dichvucong/tiepnhanonline?ten-thu-tuc=" + keyword + "&ma-co-quan=&ma-linh-vuc=&ma-muc-do=&ma-cap-thu-tuc=";
-  window.location.replace(url);
-}
+        if (keyword === '') {
+          alert('Chưa nhập từ khóa tìm kiếm');
+          return;
+        }
+        var url = "/" + "dichvucong/tiepnhanonline?ten-thu-tuc=" + keyword + "&ma-co-quan=&ma-linh-vuc=&ma-muc-do=&ma-cap-thu-tuc=";
+        window.location.replace(url);
+      }
+      function searchtt2() {
+        //alert('vào k');
+        var keyword = document.getElementById("tuKhoa2").value;
 
-</script>
-<script type="text/javascript">
-var site_id = "234";
-var url = "https://f-emc.ngsp.gov.vn/tracking";
-var src_lib = 'https://f-emc.ngsp.gov.vn/embed/gov-tracking.min.js';
-var _govaq = window._govaq || [];
-_govaq.push(['trackPageView']);
-_govaq.push(['enableLinkTracking']);
-(function () {
-  _govaq.push(['setTrackerUrl', url]);
-  _govaq.push(['setSiteId', site_id]);
+        if (keyword === '') {
+          alert('Chưa nhập từ khóa tìm kiếm');
+          return;
+        }
+        var url = "/" + "dichvucong/tiepnhanonline?ten-thu-tuc=" + keyword + "&ma-co-quan=&ma-linh-vuc=&ma-muc-do=&ma-cap-thu-tuc=";
+        window.location.replace(url);
+      }
 
-  var d = document,
-      g = d.createElement('script'),
-      s = d.getElementsByTagName('script')[0];
-  g.type = 'text/javascript';
-  g.async = true;
-  g.defer = true;
-  g.src = src_lib;
-  s.parentNode.insertBefore(g, s);
-})();
-</script>
-<div class="divfooter">
-<footer class="dvc-footer dvc-footer-hanoi">
-<div class="dvc-container">
-<div class="footer-box">
-  <div class="p-left">
-      <p> Hệ thống dịch vụ công trực tuyến TP. Hà Nội</p>
-  </div>
-  <div class="p-right">
-      <i class="fa fa-map-marker fa-sm" aria-hidden="true" style="font-size: 20px; color:white; display: inline-block;"></i>
+    </script>
+    <script type="text/javascript">
+      var site_id = "234";
+      var url = "https://f-emc.ngsp.gov.vn/tracking";
+      var src_lib = 'https://f-emc.ngsp.gov.vn/embed/gov-tracking.min.js';
+      var _govaq = window._govaq || [];
+      _govaq.push(['trackPageView']);
+      _govaq.push(['enableLinkTracking']);
+      (function () {
+        _govaq.push(['setTrackerUrl', url]);
+        _govaq.push(['setSiteId', site_id]);
 
-      <p style="display: inline-block;"> 12 Lê Lai, Phường Lý Thái Tổ, Quận Hoàn Kiếm, Thành Phố Hà Nội</p>
-  </div>
-</div>
-</div>
-</footer>
-</div>
+        var d = document,
+          g = d.createElement('script'),
+          s = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        g.defer = true;
+        g.src = src_lib;
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+    <div class="divfooter">
+      <footer class="dvc-footer dvc-footer-hanoi">
+        <div class="dvc-container">
+          <div class="footer-box">
+            <div class="p-left">
+              <p> Hệ thống dịch vụ công trực tuyến TP. Hà Nội</p>
+            </div>
+            <div class="p-right">
+              <i class="fa fa-map-marker fa-sm" aria-hidden="true"
+                style="font-size: 20px; color:white; display: inline-block;"></i>
+
+              <p style="display: inline-block;"> 12 Lê Lai, Phường Lý Thái Tổ, Quận Hoàn Kiếm, Thành Phố Hà Nội</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
 </body>
 <script type="text/javascript">
-$('form').append('<input type="hidden" name="tokenCsrf" value="3226a5f4ad6ce8b69917877398a12243-a5179db3e5495a6a2767c6197590b0b5">');
+  $('form').append('<input type="hidden" name="tokenCsrf" value="3226a5f4ad6ce8b69917877398a12243-a5179db3e5495a6a2767c6197590b0b5">');
+
+  $('.show-zone-city').click(function() {
+    const LIST_CITY = $('body').find('.item-city');
+
+    LIST_CITY.each(function() {
+      $(this).removeClass('item-city-active');
+    });
+
+    $('#zone-city').addClass('is-hidden');
+    $('#zone-chart').addClass('is-hidden');
+    
+
+    $('#zone-city').removeClass('is-hidden');
+  });
+
+  $('.item-city').click(function() {
+    const LIST_CITY = $('body').find('.item-city');
+
+    LIST_CITY.each(function() {
+      $(this).removeClass('item-city-active');
+    });
+
+    $(this).addClass('item-city-active');
+
+    $('#zone-chart').removeClass('is-hidden');
+  })
 </script>
+
 </html>
