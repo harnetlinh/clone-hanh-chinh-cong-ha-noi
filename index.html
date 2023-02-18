@@ -1135,7 +1135,7 @@ bottom: 0 !important;*/
                         <h3><b>Danh sách địa điểm</b></h3>
                         <div class="row">
                           <div class="col-2">
-                            <button class="card cursor-pointer item-city w-100"  onclick="changeDestination(0,0,0, [0,1,1,0,1,1,1,0,0,1,1,0])">
+                            <button class="card cursor-pointer item-city w-100"  onclick="changeDestination(20,30,40, [0,1,1,0,1,1,1,0,0,1,1,0],1)">
                               <div class="card-body">
                                 <span class="name-city">Hoàn Kiếm</span>
                               </div>
@@ -1143,7 +1143,7 @@ bottom: 0 !important;*/
                           </div>
 
                           <div class="col-2">
-                            <button class="card cursor-pointer item-city w-100"  onclick="changeDestination(0,0,0, [1,1,1,0,1,0,1,0,0,1,1,0])">
+                            <button class="card cursor-pointer item-city w-100"  onclick="changeDestination(20,20,5, [1,1,1,0,1,0,1,0,0,1,1,0],0)">
                               <div class="card-body">
                                 <span class="name-city">Đống Đa</span>
                               </div>
@@ -1151,7 +1151,7 @@ bottom: 0 !important;*/
                           </div>
 
                           <div class="col-2">
-                            <button class="card cursor-pointer item-city w-100" onclick="changeDestination(0,0,0, [1,1,0,1,1,0,1,0,1,1,1,0])">
+                            <button class="card cursor-pointer item-city w-100" onclick="changeDestination(15,50,20, [1,1,0,1,1,0,1,0,1,1,1,0],1)">
                               <div class="card-body">
                                 <span class="name-city">Ba Đình</span>
                               </div>
@@ -1159,7 +1159,7 @@ bottom: 0 !important;*/
                           </div>
 
                           <div class="col-2">
-                            <button class="card cursor-pointer item-city w-100" onclick="changeDestination(0,0,0, [0,1,1,0,1,0,1,0,0,1,1,1])">
+                            <button class="card cursor-pointer item-city w-100" onclick="changeDestination(20,10,0, [0,1,1,0,1,0,1,0,0,1,1,1],0)">
                               <div class="card-body">
                                 <span class="name-city">Hai Bà Trưng</span>
                               </div>
@@ -1167,7 +1167,7 @@ bottom: 0 !important;*/
                           </div>
 
                           <div class="col-2">
-                            <button class="card cursor-pointer item-city w-100" onclick="changeDestination(0,0,0, [1,1,1,1,1,1,1,1,0,1,1,0])">
+                            <button class="card cursor-pointer item-city w-100" onclick="changeDestination(20,20,0, [1,1,1,1,1,1,1,1,0,1,1,0],0)">
                               <div class="card-body">
                                 <span class="name-city">Hoàng Mai</span>
                               </div>
@@ -1189,13 +1189,13 @@ bottom: 0 !important;*/
                             <div class="card">
                               <div class="card-body">
                                 <div class="card-title">
-                                  <h4><b>Hôm nay, 19/02/2023 <i>(Ngày nghỉ)</i> </b></h4>
+                                  <h4><b>Hôm nay, 20/02/2023 <i>(Thứ hai)</i> </b></h4>
                                 </div>
 
                                 <div class="row">
                                   <div class="col-6">
-                                    <div class="chart-fake">
-                                      <div class="chart-fake-value">KHÔNG ĐÔNG</div>
+                                    <div class="chart-fake" id="chart-fake">
+                                      <div class="chart-fake-value"></div>
                                     </div>
                                   </div>
 
@@ -1565,19 +1565,34 @@ bottom: 0 !important;*/
       </div>
     </div>
     <script type="text/javascript">
-      function changeDestination(val1, val2, val3, predictions){
+      function changeDestination(val1, val2, val3, predictions, is_crowd){
+        document.getElementById("chart-fake").classList.remove("crowd-background");
+        document.getElementById("chart-fake").classList.remove("little-background");
+        document.getElementById("chart-fake").getElementsByClassName("chart-fake-value")[0].innerText = "";
+        if(is_crowd){
+          document.getElementById("chart-fake").classList.add("crowd-background");
+          document.getElementById("chart-fake").getElementsByClassName("chart-fake-value")[0].innerText = "Đông";
+        }else{
+          document.getElementById("chart-fake").classList.add("little-background");
+          document.getElementById("chart-fake").getElementsByClassName("chart-fake-value")[0].innerText = "Vắng";
+        }
         document.getElementById("nv-hanh-chinh").innerText = val1;
         document.getElementById("dang-lam").innerText = val2;
         document.getElementById("dang-cho").innerText = val3;
         for (let index = 1; index <= predictions.length; index++) {
-          document.getElementById("day-"+index).classList.remove("little-bacground");
-          document.getElementById("day-"+index).classList.remove("crowd-bacground");
+          document.getElementById("day-"+index).classList.remove("little-background");
+          document.getElementById("day-"+index).classList.remove("crowd-background");
+          console.log(document.getElementById("day-"+index).getElementsByClassName("mt-4")[0]);
+          document.getElementById("day-"+index).getElementsByClassName("mt-4")[0].innerText = "";
         }
+        // for (let index = 0; index < all_text.length; index++) {
+        //   all_text[index].innerText = "";
+        // }
         for (let index = 1; index <= predictions.length; index++) {
           if(predictions[index - 1]){
             document.getElementById("day-"+index).classList.add("little-background");
             // change text inside document.getElementById("day-"+index) with class name mt-4 to KHÔNG ĐÔNG
-            document.getElementById("day-"+index).getElementsByClassName("mt-4")[0].innerText = "KHÔNG ĐÔNG";
+            document.getElementById("day-"+index).getElementsByClassName("mt-4")[0].innerText = "VẮNG";
           }else{
             document.getElementById("day-"+index).classList.add("crowd-background");
             document.getElementById("day-"+index).getElementsByClassName("mt-4")[0].innerText = "ĐÔNG";
